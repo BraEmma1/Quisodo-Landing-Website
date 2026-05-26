@@ -44,22 +44,24 @@ export default function Home() {
         </div>
 
         {/* Scroll Down Indicator */}
-        <ScrollReveal delay={300} className="absolute bottom-12 left-1/2 -translate-x-1/2 z-20">
-          <button
-            onClick={() => {
-              const element = document.getElementById('sanctuary-story');
-              if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
-              }
-            }}
-            className="flex items-center justify-center w-12 h-12 rounded-full border border-white/20 hover:border-tertiary text-white hover:text-tertiary hover:bg-tertiary/10 transition-all duration-500 cursor-pointer focus:outline-none active:scale-90 animate-bounce"
-            aria-label="Scroll to story"
-          >
-            <span className="material-symbols-outlined text-[20px]">
-              arrow_downward
-            </span>
-          </button>
-        </ScrollReveal>
+        <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-20">
+          <ScrollReveal delay={300}>
+            <button
+              onClick={() => {
+                const element = document.getElementById('sanctuary-story');
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+              className="flex items-center justify-center w-12 h-12 rounded-full border border-white/20 hover:border-tertiary text-white hover:text-tertiary hover:bg-tertiary/10 transition-all duration-500 cursor-pointer focus:outline-none active:scale-90 animate-bounce"
+              aria-label="Scroll to story"
+            >
+              <span className="material-symbols-outlined text-[20px]">
+                arrow_downward
+              </span>
+            </button>
+          </ScrollReveal>
+        </div>
       </header>
 
       {/* Main Content Area */}
