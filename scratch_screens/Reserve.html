@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Reserve Your Riverside Escape | Quisodo</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container-low": "#1c1c17",
+                      "inverse-surface": "#e6e2da",
+                      "secondary-fixed": "#f3e1bb",
+                      "on-tertiary-fixed": "#261900",
+                      "on-primary-fixed-variant": "#3b494c",
+                      "tertiary-fixed": "#ffdea5",
+                      "primary-fixed-dim": "#bac9cd",
+                      "surface-container": "#20201b",
+                      "surface-container-highest": "#363530",
+                      "on-background": "#e6e2da",
+                      "on-surface": "#e6e2da",
+                      "surface-tint": "#bac9cd",
+                      "on-secondary-fixed-variant": "#51462a",
+                      "on-tertiary-fixed-variant": "#5b430c",
+                      "surface": "#14130f",
+                      "on-primary-container": "#768488",
+                      "surface-variant": "#363530",
+                      "inverse-on-surface": "#31302b",
+                      "surface-dim": "#14130f",
+                      "tertiary": "#e6c17f",
+                      "on-secondary": "#392f16",
+                      "secondary-fixed-dim": "#d6c5a1",
+                      "outline": "#8d9193",
+                      "on-error-container": "#ffdad6",
+                      "outline-variant": "#424849",
+                      "primary": "#bac9cd",
+                      "tertiary-fixed-dim": "#e6c17f",
+                      "on-primary-fixed": "#101e21",
+                      "error": "#ffb4ab",
+                      "background": "#14130f",
+                      "surface-container-lowest": "#0f0e0a",
+                      "inverse-primary": "#526164",
+                      "on-surface-variant": "#c3c7c9",
+                      "surface-container-high": "#2b2a25",
+                      "on-tertiary-container": "#9c7d42",
+                      "primary-container": "#0d1b1e",
+                      "surface-bright": "#3a3934",
+                      "tertiary-container": "#231700",
+                      "error-container": "#93000a",
+                      "on-error": "#690005",
+                      "on-secondary-fixed": "#231a04",
+                      "on-secondary-container": "#c4b491",
+                      "secondary": "#d6c5a1",
+                      "secondary-container": "#51462a",
+                      "on-primary": "#253336",
+                      "on-tertiary": "#412d00",
+                      "primary-fixed": "#d6e5e9"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-desktop": "80px",
+                      "gutter": "32px",
+                      "margin-mobile": "24px",
+                      "container-max": "1440px",
+                      "section-gap": "160px"
+              },
+              "fontFamily": {
+                      "label-caps": [
+                              "Manrope"
+                      ],
+                      "headline-md": [
+                              "Bodoni Moda"
+                      ],
+                      "headline-lg": [
+                              "Bodoni Moda"
+                      ],
+                      "body-lg": [
+                              "Manrope"
+                      ],
+                      "display-xl-mobile": [
+                              "Bodoni Moda"
+                      ],
+                      "display-xl": [
+                              "Bodoni Moda"
+                      ],
+                      "body-md": [
+                              "Manrope"
+                      ],
+                      "headline-lg-mobile": [
+                              "Bodoni Moda"
+                      ]
+              },
+              "fontSize": {
+                      "label-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "100%",
+                                      "letterSpacing": "0.2em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "120%",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg": [
+                              "64px",
+                              {
+                                      "lineHeight": "110%",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "160%",
+                                      "letterSpacing": "0.01em",
+                                      "fontWeight": "300"
+                              }
+                      ],
+                      "display-xl-mobile": [
+                              "48px",
+                              {
+                                      "lineHeight": "100%",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-xl": [
+                              "84px",
+                              {
+                                      "lineHeight": "90%",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "160%",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "36px",
+                              {
+                                      "lineHeight": "110%",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        .glass-panel {
+            background: rgba(20, 19, 15, 0.6);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(141, 145, 147, 0.15);
+        }
+        
+        .input-ghost {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid rgba(141, 145, 147, 0.3);
+            color: #e6e2da;
+            transition: border-color 0.3s ease;
+        }
+        
+        .input-ghost:focus {
+            outline: none;
+            border-bottom-color: #e6c17f;
+            box-shadow: none;
+        }
+        
+        /* Hide scrollbar for clean horizontal scrolls */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md text-body-md antialiased min-h-screen flex flex-col">
+<!-- TopNavBar (Transactional Intent - Suppressed) -->
+<!-- Booking is a focused journey, navigation shell is suppressed as per The "Semantic Shell" Mandate -->
+<!-- Minimal Header for Transactional Flow -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-8 max-w-container-max mx-auto bg-surface/80 backdrop-blur-2xl">
+<a class="font-headline-md text-headline-md tracking-[0.2em] text-on-surface" href="#">QUISODO</a>
+<button class="text-on-surface-variant font-label-caps text-label-caps hover:text-primary transition-colors duration-500 uppercase">
+            Cancel
+        </button>
+</header>
+<!-- Main Content -->
+<main class="flex-grow pt-[120px] pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full flex flex-col lg:flex-row gap-gutter relative">
+<!-- Booking Form Area -->
+<div class="flex-1 flex flex-col gap-16 lg:pr-8">
+<!-- Hero Header -->
+<section class="mt-8 md:mt-16">
+<h1 class="font-display-xl-mobile md:font-display-xl text-display-xl-mobile md:text-display-xl mb-6">Reserve Your Riverside Escape</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Curate your sanctuary experience. Select your dates, preferred accommodations, and exclusive experiences for an unforgettable stay.</p>
+</section>
+<!-- Step 1: Dates & Guests -->
+<section class="glass-panel p-8 md:p-12 rounded-xl flex flex-col gap-10">
+<div class="flex items-center gap-4 border-b border-outline-variant/20 pb-4">
+<span class="font-label-caps text-label-caps text-tertiary">01</span>
+<h2 class="font-headline-md text-headline-md">Dates &amp; Guests</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+<!-- Check-in -->
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">Check-in</label>
+<div class="relative">
+<input class="input-ghost w-full py-4 text-body-lg font-body-lg" type="date" value="2024-10-15"/>
+</div>
+</div>
+<!-- Check-out -->
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">Check-out</label>
+<div class="relative">
+<input class="input-ghost w-full py-4 text-body-lg font-body-lg" type="date" value="2024-10-20"/>
+</div>
+</div>
+<!-- Guests -->
+<div class="flex flex-col gap-2 md:col-span-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">Guests</label>
+<div class="flex items-center justify-between input-ghost py-4">
+<span class="font-body-lg text-body-lg">2 Adults, 0 Children</span>
+<span class="material-symbols-outlined text-outline" data-icon="expand_more">expand_more</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Step 2: Select Accommodation -->
+<section class="flex flex-col gap-10">
+<div class="flex items-center gap-4 border-b border-outline-variant/20 pb-4">
+<span class="font-label-caps text-label-caps text-tertiary">02</span>
+<h2 class="font-headline-md text-headline-md">Accommodations</h2>
+</div>
+<div class="grid grid-cols-1 gap-8">
+<!-- Room Card 1 -->
+<div class="group relative flex flex-col md:flex-row gap-6 glass-panel p-4 rounded-xl transition-all duration-500 hover:border-outline/40 cursor-pointer">
+<div class="w-full md:w-1/3 aspect-[4/3] md:aspect-square overflow-hidden rounded-lg relative">
+<div class="absolute inset-0 bg-surface/20 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
+<img class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" data-alt="A luxurious, minimalist bedroom in a riverfront villa. The room features a large bed with crisp, pristine white linens. The decor is deeply sophisticated, utilizing a palette of dark charcoal, muted gold, and deep river navy. Large floor-to-ceiling windows look out onto a serene, dark river at twilight. The lighting is low and cinematic, creating an atmosphere of quiet luxury and mystery." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC12tk30eZQ1XiU0-40tisLlR36K-UYvVSbWi6SwxBDeeghKqUH_hUD2RNHlvUX8ltuQek6W-IrEGLI1FdOEsgvb31blncMmWzxZHmW8Jh5srBxHfGHSJkuXPfm0d2FcKH2QfJEb8gtjM4OWlV0GLR_J3wDiGkIkKb7zjGZKl5bM6p8CN_TCQW667z4uwVPDoHT0enslY3ADmmQpcdw7O06daqnEhivnOBaKSnZlgbN-r3XCRCoVFyAgfiq8E2DY3tZPlzfLj5t-kJ2"/>
+</div>
+<div class="flex-1 py-2 pr-4 flex flex-col justify-between">
+<div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile mb-2">The River Suite</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Expansive views of the Volta, private plunge pool, and bespoke furnishings in deep navy and natural stone.</p>
+<ul class="flex flex-wrap gap-x-6 gap-y-2 mb-6">
+<li class="flex items-center gap-2 font-label-caps text-label-caps text-on-surface-variant"><span class="material-symbols-outlined text-[16px]" data-icon="square_foot">square_foot</span> 85 SQM</li>
+<li class="flex items-center gap-2 font-label-caps text-label-caps text-on-surface-variant"><span class="material-symbols-outlined text-[16px]" data-icon="king_bed">king_bed</span> KING BED</li>
+</ul>
+</div>
+<div class="flex items-end justify-between mt-auto border-t border-outline-variant/20 pt-4">
+<div>
+<span class="block font-label-caps text-label-caps text-on-surface-variant mb-1 uppercase">From</span>
+<span class="font-headline-md text-headline-md">$850<span class="font-body-md text-body-md text-on-surface-variant">/night</span></span>
+</div>
+<button class="w-8 h-8 rounded-full border border-outline flex items-center justify-center group-hover:bg-tertiary group-hover:border-tertiary group-hover:text-on-tertiary transition-all duration-300">
+<span class="material-symbols-outlined text-[18px]" data-icon="add">add</span>
+</button>
+</div>
+</div>
+<!-- Selection Indicator -->
+<div class="absolute top-6 right-6 w-6 h-6 rounded-full border-2 border-tertiary flex items-center justify-center bg-tertiary text-on-tertiary opacity-100 transition-opacity duration-300">
+<span class="material-symbols-outlined text-[16px]" data-icon="check">check</span>
+</div>
+</div>
+<!-- Room Card 2 -->
+<div class="group relative flex flex-col md:flex-row gap-6 glass-panel p-4 rounded-xl transition-all duration-500 hover:border-outline/40 cursor-pointer">
+<div class="w-full md:w-1/3 aspect-[4/3] md:aspect-square overflow-hidden rounded-lg relative">
+<div class="absolute inset-0 bg-surface/40 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
+<img class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" data-alt="A sophisticated, minimalist hotel room interior. The focus is on tactile textures with dark wood paneling, a plush velvet chair in muted gold, and a bed with high-end dark grey linens. The lighting is moody and architectural, emphasizing shadows and contrast. The overall aesthetic is 'Riverfront Noir', feeling exclusive, serene, and deeply luxurious." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEZ0KAWqxAmnb0GVb7cAexyJbCD0vIc7mkO4rOOc3343iCOxeOTbOlgrcjBUC-kdkd4KKnCHIN3KZ-qhXPwYgN_bT5rhTLFmxD7dpS8GGWXXSe9GcsLG8c4LXYdcqFSQ-9gASOVy3YxhGhrw4MIvQ8h0rXgVsi40sqXGzRg88_qTlOoj3ixMCUJM80R-W4l99r1uzbdOEQDlM6iet5aDoW3VOutd8dy3kLPlkGVl2Y2nzRRUKsdnKaqQIbQB6iz9m_UY-VkSu9PeSn"/>
+</div>
+<div class="flex-1 py-2 pr-4 flex flex-col justify-between">
+<div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile mb-2">Canopy Villa</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Elevated among the ancient trees, offering complete privacy and an immersive connection with nature.</p>
+<ul class="flex flex-wrap gap-x-6 gap-y-2 mb-6">
+<li class="flex items-center gap-2 font-label-caps text-label-caps text-on-surface-variant"><span class="material-symbols-outlined text-[16px]" data-icon="square_foot">square_foot</span> 120 SQM</li>
+<li class="flex items-center gap-2 font-label-caps text-label-caps text-on-surface-variant"><span class="material-symbols-outlined text-[16px]" data-icon="king_bed">king_bed</span> KING BED</li>
+</ul>
+</div>
+<div class="flex items-end justify-between mt-auto border-t border-outline-variant/20 pt-4">
+<div>
+<span class="block font-label-caps text-label-caps text-on-surface-variant mb-1 uppercase">From</span>
+<span class="font-headline-md text-headline-md">$1,200<span class="font-body-md text-body-md text-on-surface-variant">/night</span></span>
+</div>
+<button class="w-8 h-8 rounded-full border border-outline flex items-center justify-center group-hover:bg-surface-variant transition-all duration-300">
+<span class="material-symbols-outlined text-[18px]" data-icon="add">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Summary Sidebar (Sticky) -->
+<aside class="w-full lg:w-[400px] mt-16 lg:mt-0 relative">
+<div class="sticky top-[120px] glass-panel p-8 rounded-xl flex flex-col gap-8">
+<div>
+<h3 class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest mb-6">Reservation Summary</h3>
+<div class="flex justify-between items-start mb-6">
+<div>
+<h4 class="font-headline-md text-headline-md mb-1">The River Suite</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">2 Adults</p>
+</div>
+</div>
+<div class="flex gap-4 border-y border-outline-variant/20 py-6 mb-6">
+<div class="flex-1">
+<span class="block font-label-caps text-label-caps text-on-surface-variant mb-1 uppercase">Check In</span>
+<span class="font-body-lg text-body-lg">Oct 15, 2024</span>
+</div>
+<div class="w-px bg-outline-variant/20"></div>
+<div class="flex-1 pl-4">
+<span class="block font-label-caps text-label-caps text-on-surface-variant mb-1 uppercase">Check Out</span>
+<span class="font-body-lg text-body-lg">Oct 20, 2024</span>
+</div>
+</div>
+<div class="space-y-4 font-body-md text-body-md">
+<div class="flex justify-between">
+<span class="text-on-surface-variant">$850 x 5 nights</span>
+<span>$4,250</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Taxes &amp; Fees</span>
+<span>$425</span>
+</div>
+</div>
+</div>
+<div class="border-t border-outline-variant/20 pt-6">
+<div class="flex justify-between items-end mb-8">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Total</span>
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-tertiary">$4,675</span>
+</div>
+<button class="w-full py-4 border border-outline text-on-surface font-label-caps text-label-caps uppercase tracking-[0.2em] hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-colors duration-500">
+                        Complete Reservation
+                    </button>
+<p class="text-center font-body-md text-[12px] text-on-surface-variant mt-4">You won't be charged yet.</p>
+</div>
+</div>
+</aside>
+</main>
+<!-- Footer (Suppressed for Transactional Intent) -->
+</body></html>

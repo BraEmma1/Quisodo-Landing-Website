@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>404 - River Took You Elsewhere | QUISODO</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration (Design System) -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-low": "#1c1c17",
+                        "inverse-surface": "#e6e2da",
+                        "secondary-fixed": "#f3e1bb",
+                        "on-tertiary-fixed": "#261900",
+                        "on-primary-fixed-variant": "#3b494c",
+                        "tertiary-fixed": "#ffdea5",
+                        "primary-fixed-dim": "#bac9cd",
+                        "surface-container": "#20201b",
+                        "surface-container-highest": "#363530",
+                        "on-background": "#e6e2da",
+                        "on-surface": "#e6e2da",
+                        "surface-tint": "#bac9cd",
+                        "on-secondary-fixed-variant": "#51462a",
+                        "on-tertiary-fixed-variant": "#5b430c",
+                        "surface": "#14130f",
+                        "on-primary-container": "#768488",
+                        "surface-variant": "#363530",
+                        "inverse-on-surface": "#31302b",
+                        "surface-dim": "#14130f",
+                        "tertiary": "#e6c17f",
+                        "on-secondary": "#392f16",
+                        "secondary-fixed-dim": "#d6c5a1",
+                        "outline": "#8d9193",
+                        "on-error-container": "#ffdad6",
+                        "outline-variant": "#424849",
+                        "primary": "#bac9cd",
+                        "tertiary-fixed-dim": "#e6c17f",
+                        "on-primary-fixed": "#101e21",
+                        "error": "#ffb4ab",
+                        "background": "#14130f",
+                        "surface-container-lowest": "#0f0e0a",
+                        "inverse-primary": "#526164",
+                        "on-surface-variant": "#c3c7c9",
+                        "surface-container-high": "#2b2a25",
+                        "on-tertiary-container": "#9c7d42",
+                        "primary-container": "#0d1b1e",
+                        "surface-bright": "#3a3934",
+                        "tertiary-container": "#231700",
+                        "error-container": "#93000a",
+                        "on-error": "#690005",
+                        "on-secondary-fixed": "#231a04",
+                        "on-secondary-container": "#c4b491",
+                        "secondary": "#d6c5a1",
+                        "secondary-container": "#51462a",
+                        "on-primary": "#253336",
+                        "on-tertiary": "#412d00",
+                        "primary-fixed": "#d6e5e9"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "80px",
+                        "gutter": "32px",
+                        "margin-mobile": "24px",
+                        "container-max": "1440px",
+                        "section-gap": "160px"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["Manrope"],
+                        "headline-md": ["Bodoni Moda"],
+                        "headline-lg": ["Bodoni Moda"],
+                        "body-lg": ["Manrope"],
+                        "display-xl-mobile": ["Bodoni Moda"],
+                        "display-xl": ["Bodoni Moda"],
+                        "body-md": ["Manrope"],
+                        "headline-lg-mobile": ["Bodoni Moda"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["12px", { "lineHeight": "100%", "letterSpacing": "0.2em", "fontWeight": "600" }],
+                        "headline-md": ["32px", { "lineHeight": "120%", "fontWeight": "400" }],
+                        "headline-lg": ["64px", { "lineHeight": "110%", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "160%", "letterSpacing": "0.01em", "fontWeight": "300" }],
+                        "display-xl-mobile": ["48px", { "lineHeight": "100%", "fontWeight": "400" }],
+                        "display-xl": ["84px", { "lineHeight": "90%", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "160%", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["36px", { "lineHeight": "110%", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        /* Base styles for material symbols */
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        /* Subtle pan animation for background */
+        @keyframes slowPan {
+            0% { transform: scale(1.05) translate(0, 0); }
+            50% { transform: scale(1.1) translate(-1%, -1%); }
+            100% { transform: scale(1.05) translate(0, 0); }
+        }
+        .animate-slow-pan {
+            animation: slowPan 40s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased min-h-screen flex flex-col selection:bg-tertiary selection:text-on-tertiary">
+<!-- 
+      Navigation and Footer are intentionally suppressed per the "Automatic Suppression" rule:
+      "If the page content (e.g., 'Privacy Policy' or 'Error 404') does not logically sit under 
+      the categories defined in the JSON, suppress the navigation to prioritize the content canvas."
+    -->
+<main class="flex-grow relative flex items-center justify-center overflow-hidden min-h-screen">
+<!-- Cinematic Background Layer -->
+<div class="absolute inset-0 z-0 bg-surface">
+<div class="absolute inset-0 w-full h-full bg-cover bg-center opacity-40 animate-slow-pan" data-alt="A cinematic, moody photograph of a wide, slow-moving river at twilight. The scene is enveloped in a thick, ethereal mist, obscuring the distant opposite bank. The lighting is low and atmospheric, emphasizing deep navy blues and absolute blacks, consistent with a 'Riverfront Noir' aesthetic. Subtle reflections of sparse, distant lights shimmer on the disturbed water surface, creating a sense of quiet luxury and mysterious isolation." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAiq4NIenZCJKOV7HpQa9h0k4HFoS78YYeuoiVTrMvrmp_NUSAtorvEPLsZFv5XQxmVY7Z_M4W_EDKuURdFGGkUYNpmvpS4hEtBLVb_zXw5rD1Ep4RBKNgqFTe07YqQcjlYmpnd5_rn8Oz1IH6YQrrQZ1MjKF3-2ahnMJw-50w13gFo_CWXGLdv7qlXsOYRYhgjMIcYyr5zuAPeCwuvFv8JoGNp8fzHgMwh1QySal0ra0Kj9ya4TInV0-_r-sVMh-yjKcN3ueWeHN4Q');">
+</div>
+<!-- Tonal Layering / Gradients for Depth and Readability -->
+<div class="absolute inset-0 bg-gradient-to-b from-surface/20 via-surface/60 to-surface"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary-container/80 via-transparent to-transparent"></div>
+</div>
+<!-- Content Canvas -->
+<div class="relative z-10 flex flex-col items-center justify-center w-full px-margin-mobile md:px-margin-desktop py-section-gap max-w-container-max mx-auto text-center">
+<!-- Structural Layering: Huge '404' acting as a textural element -->
+<div aria-hidden="true" class="font-display-xl-mobile md:font-display-xl text-display-xl-mobile md:text-display-xl text-on-surface opacity-10 tracking-widest mb-8 select-none pointer-events-none">
+                404
+            </div>
+<!-- Immersive Headline -->
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface max-w-4xl mb-6 leading-tight drop-shadow-lg">
+                Looks Like The River Took You Somewhere Else.
+            </h1>
+<!-- Supporting Context -->
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-12">
+                The currents of discovery sometimes lead to uncharted shores. Let us guide you back to familiar waters.
+            </p>
+<!-- Primary Action Button (Ghost style with transition) -->
+<a class="group relative inline-flex items-center justify-center px-8 py-4 border border-outline hover:border-tertiary transition-colors duration-500 overflow-hidden cursor-pointer" href="/">
+<!-- Background Fill on Hover -->
+<span class="absolute inset-0 w-full h-full bg-tertiary transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-[cubic-bezier(0.19,1,0.22,1)]"></span>
+<!-- Label & Icon -->
+<span class="relative z-10 font-label-caps text-label-caps text-on-surface group-hover:text-on-tertiary transition-colors duration-500 flex items-center gap-3">
+<span class="material-symbols-outlined" data-icon="sailing">sailing</span>
+                    Return to Shore
+                </span>
+</a>
+</div>
+</main>
+</body></html>

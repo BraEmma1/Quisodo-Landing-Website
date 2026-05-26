@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Guest Reflections - QUISODO Riverside Sanctuary</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600&amp;family=Bodoni+Moda:opsz,wght@6..96,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-low": "#1c1c17",
+                        "inverse-surface": "#e6e2da",
+                        "secondary-fixed": "#f3e1bb",
+                        "on-tertiary-fixed": "#261900",
+                        "on-primary-fixed-variant": "#3b494c",
+                        "tertiary-fixed": "#ffdea5",
+                        "primary-fixed-dim": "#bac9cd",
+                        "surface-container": "#20201b",
+                        "surface-container-highest": "#363530",
+                        "on-background": "#e6e2da",
+                        "on-surface": "#e6e2da",
+                        "surface-tint": "#bac9cd",
+                        "on-secondary-fixed-variant": "#51462a",
+                        "on-tertiary-fixed-variant": "#5b430c",
+                        "surface": "#14130f",
+                        "on-primary-container": "#768488",
+                        "surface-variant": "#363530",
+                        "inverse-on-surface": "#31302b",
+                        "surface-dim": "#14130f",
+                        "tertiary": "#e6c17f",
+                        "on-secondary": "#392f16",
+                        "secondary-fixed-dim": "#d6c5a1",
+                        "outline": "#8d9193",
+                        "on-error-container": "#ffdad6",
+                        "outline-variant": "#424849",
+                        "primary": "#bac9cd",
+                        "tertiary-fixed-dim": "#e6c17f",
+                        "on-primary-fixed": "#101e21",
+                        "error": "#ffb4ab",
+                        "background": "#14130f",
+                        "surface-container-lowest": "#0f0e0a",
+                        "inverse-primary": "#526164",
+                        "on-surface-variant": "#c3c7c9",
+                        "surface-container-high": "#2b2a25",
+                        "on-tertiary-container": "#9c7d42",
+                        "primary-container": "#0d1b1e",
+                        "surface-bright": "#3a3934",
+                        "tertiary-container": "#231700",
+                        "error-container": "#93000a",
+                        "on-error": "#690005",
+                        "on-secondary-fixed": "#231a04",
+                        "on-secondary-container": "#c4b491",
+                        "secondary": "#d6c5a1",
+                        "secondary-container": "#51462a",
+                        "on-primary": "#253336",
+                        "on-tertiary": "#412d00",
+                        "primary-fixed": "#d6e5e9"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "80px",
+                        "gutter": "32px",
+                        "margin-mobile": "24px",
+                        "container-max": "1440px",
+                        "section-gap": "160px"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["Manrope"],
+                        "headline-md": ["Bodoni Moda"],
+                        "headline-lg": ["Bodoni Moda"],
+                        "body-lg": ["Manrope"],
+                        "display-xl-mobile": ["Bodoni Moda"],
+                        "display-xl": ["Bodoni Moda"],
+                        "body-md": ["Manrope"],
+                        "headline-lg-mobile": ["Bodoni Moda"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["12px", { "lineHeight": "100%", "letterSpacing": "0.2em", "fontWeight": "600" }],
+                        "headline-md": ["32px", { "lineHeight": "120%", "fontWeight": "400" }],
+                        "headline-lg": ["64px", { "lineHeight": "110%", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "160%", "letterSpacing": "0.01em", "fontWeight": "300" }],
+                        "display-xl-mobile": ["48px", { "lineHeight": "100%", "fontWeight": "400" }],
+                        "display-xl": ["84px", { "lineHeight": "90%", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "160%", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["36px", { "lineHeight": "110%", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+            overflow-x: hidden;
+        }
+        .parallax-bg {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .glass-panel {
+            background: rgba(20, 19, 15, 0.4);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(141, 145, 147, 0.1);
+        }
+        .text-glow {
+            text-shadow: 0 0 20px rgba(230, 226, 218, 0.1);
+        }
+        .image-overlay {
+            background: linear-gradient(to top, rgba(20, 19, 15, 0.9) 0%, rgba(20, 19, 15, 0) 100%);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-primary/30 selection:text-primary">
+<!-- Top Navigation (Shared Component) -->
+<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-8 max-w-container-max mx-auto bg-surface/80 backdrop-blur-2xl transition-all duration-300" id="main-nav">
+<!-- Brand Logo -->
+<a class="font-headline-md text-headline-md tracking-[0.2em] text-on-surface hover:text-primary transition-colors duration-500 scale-95 hover:scale-100 ease-in-out" href="#">
+            QUISODO
+        </a>
+<!-- Desktop Navigation Links -->
+<div class="hidden md:flex items-center space-x-gutter">
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-primary transition-colors duration-500" href="#">Stay</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-primary transition-colors duration-500" href="#">Experiences</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-primary transition-colors duration-500" href="#">Boats</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-primary transition-colors duration-500" href="#">Gallery</a>
+<a class="text-primary border-b border-primary pb-1 font-label-caps text-label-caps transition-colors duration-500" href="#">Journal</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-primary transition-colors duration-500" href="#">Contact</a>
+</div>
+<!-- Trailing Action -->
+<div class="flex items-center space-x-6">
+<button class="hidden md:block font-label-caps text-label-caps text-on-surface border border-outline px-6 py-3 hover:bg-secondary hover:text-on-secondary transition-all duration-500">
+                Reserve
+            </button>
+<button aria-label="Menu" class="md:hidden text-on-surface">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu</span>
+</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative h-screen flex items-center justify-center pt-24">
+<div class="absolute inset-0 z-0 parallax-bg image-6" data-alt="Cinematic wide shot of a luxurious, shadowy hotel lobby at dusk, overlooking a serene, dark river. The mood is mysterious and sophisticated, 'Riverfront Noir' aesthetic. Deep black shadows contrast with warm, muted gold lighting from subtle lamps and the fading twilight outside. High-end minimalist furniture sits on polished dark stone floors. Atmosphere is quiet, contemplative, and exclusively luxurious." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA_PE3YwC8YLgx_QVt4-fHmZKMbo8Kkw9orFy_bEK5MDr8RUK8OFFvAmWP_tZd8Nca1njs59gwjSg1bYY0fMaOq1795oncG0079rFRznUmyWS0jUTVnFqjoFVnZFInfTiQ7wiFnoWZIUOTb6HN0xdxgISqPvJK-DRGKTXtFqlB25-VHqml8rdH5ddJp203VbugIvEDVd7DaL5_3YPng-L795h59owk9IB9m1cC7DPOUsWdjLi-I8sm09jNppbtXpDJ6isFBkP-0f8LD');">
+<div class="absolute inset-0 bg-surface/60"></div>
+</div>
+<div class="relative z-10 text-center px-margin-mobile max-w-4xl mx-auto flex flex-col items-center">
+<span class="font-label-caps text-label-caps text-tertiary mb-6 tracking-[0.3em] uppercase block">Guest Reflections</span>
+<h1 class="font-display-xl-mobile md:font-display-xl text-display-xl-mobile md:text-display-xl text-on-surface mb-8 text-glow">
+                Echoes of the River
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto opacity-80">
+                Quiet moments, profound stillness. Read the experiences of those who have found sanctuary along the Volta.
+            </p>
+</div>
+<div class="absolute bottom-12 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center opacity-60 hover:opacity-100 transition-opacity duration-500 cursor-pointer">
+<span class="font-label-caps text-label-caps text-on-surface mb-4">Descend</span>
+<div class="w-[1px] h-16 bg-gradient-to-b from-on-surface to-transparent"></div>
+</div>
+</header>
+<!-- Content Sections -->
+<main class="relative z-20 bg-background">
+<!-- Featured Testimonial (Bento/Asymmetric) -->
+<section class="px-margin-mobile md:px-margin-desktop py-section-gap max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<!-- Image Side -->
+<div class="md:col-span-7 relative group">
+<div class="relative h-[600px] w-full overflow-hidden rounded-sm">
+<img alt="Guest Portrait" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 filter grayscale-[30%] contrast-125 brightness-90 image-7" data-alt="Intimate, cinematic portrait of a sophisticated woman looking thoughtfully out over a dark body of water. She is bathed in soft, diffused evening light that highlights the textures of her elegant, minimalist clothing. The background is a beautifully blurred riverscape in deep navy and muted greens. The mood is introspective, serene, and quietly luxurious, embodying a 'Riverfront Noir' aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAj74TK0cTXucxMJPXskFriX4N83rhxmaz9CxviHivMUF2LmXeZb0BpGUpWNGZvT4bcOoWIA_m1JP9zodU2VmwLgHyXd_mjxZ_G4Yvv6cCAUF3ahfNd9yI9hhDZNpchE-g6nuYe1bphBrOCtB7ZMr_0VTvI3Y3XqRq0zwIWq-ERLahq145ZWOo3DWlD8OtbG3LJ8e57jsr8oH7u2fqy2rmOUoTtqzMHzQ4aBX18ggJh5hIpRqPl8QRzNL8p8DYbKNYhCXHQHrJTtooI"/>
+<div class="absolute inset-0 image-overlay"></div>
+</div>
+<!-- Decorative Element -->
+<div class="absolute -right-12 bottom-24 w-64 h-[1px] bg-outline/30 hidden lg:block"></div>
+</div>
+<!-- Quote Side -->
+<div class="md:col-span-5 md:pl-12 lg:pl-24 flex flex-col justify-center mt-12 md:mt-0 relative z-10">
+<span class="material-symbols-outlined text-4xl text-tertiary mb-8 opacity-50" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-8 leading-tight">
+                        "Time doesn't merely slow down here; it completely unravels."
+                    </h2>
+<div class="h-[1px] w-12 bg-tertiary mb-8"></div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">
+                        The architecture forces you to look outward, and in doing so, you are gently nudged to look inward. It is a masterclass in restrained luxury.
+                    </p>
+<p class="font-label-caps text-label-caps text-on-surface tracking-widest uppercase">
+                        — E. Kensington, Architect
+                    </p>
+</div>
+</div>
+</section>
+<!-- Testimonial Grid (Glassmorphism Cards) -->
+<section class="px-margin-mobile md:px-margin-desktop py-section-gap bg-surface-container-lowest relative overflow-hidden">
+<!-- Atmospheric background element -->
+<div class="absolute top-0 right-0 w-[800px] h-[800px] bg-primary-container/20 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
+<div class="max-w-container-max mx-auto relative z-10">
+<div class="flex flex-col md:flex-row justify-between items-end mb-24">
+<div class="max-w-2xl">
+<span class="font-label-caps text-label-caps text-tertiary mb-4 tracking-[0.3em] uppercase block">Shared Silence</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Echoes from our guests</h3>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-gutter">
+<!-- Card 1 -->
+<div class="glass-panel p-10 flex flex-col h-full hover:-translate-y-2 transition-transform duration-500 ease-out">
+<div class="flex items-center space-x-1 mb-8">
+<span class="material-symbols-outlined text-tertiary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-tertiary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-tertiary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-tertiary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-tertiary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant flex-grow mb-12">
+                            The river cruise at midnight was a revelation. Only the sound of the water against the hull and the vast, starry canvas above. It felt like stepping into another world entirely.
+                        </p>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface uppercase tracking-widest mb-1">M. Dubois</p>
+<p class="font-label-caps text-label-caps text-outline-variant uppercase text-[10px]">Paris, France</p>
+</div>
+</div>
+<!-- Card 2 (Offset slightly for asymmetry) -->
+<div class="glass-panel p-10 flex flex-col h-full md:translate-y-8 hover:-translate-y-2 transition-transform duration-500 ease-out">
+<div class="flex items-center space-x-1 mb-8">
+<span class="material-symbols-outlined text-tertiary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-tertiary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-tertiary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-tertiary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-tertiary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant flex-grow mb-12">
+                            A masterclass in restraint. There is no loud luxury here, only profound comfort and an atmosphere that demands quiet contemplation. The culinary experience was exceptional.
+                        </p>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface uppercase tracking-widest mb-1">J. &amp; S. Alarie</p>
+<p class="font-label-caps text-label-caps text-outline-variant uppercase text-[10px]">Geneva, Switzerland</p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="glass-panel p-10 flex flex-col h-full hover:-translate-y-2 transition-transform duration-500 ease-out">
+<div class="flex items-center space-x-1 mb-8">
+<span class="material-symbols-outlined text-tertiary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-tertiary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-tertiary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-tertiary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-tertiary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant flex-grow mb-12">
+                            I came seeking a retreat to finish a manuscript. The dark, moody aesthetic and the ever-present sound of the river provided the perfect, uninterrupted canvas.
+                        </p>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface uppercase tracking-widest mb-1">A. Thompson</p>
+<p class="font-label-caps text-label-caps text-outline-variant uppercase text-[10px]">London, UK</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="bg-surface-container-lowest flex flex-col w-full px-margin-mobile md:px-margin-desktop py-section-gap max-w-container-max mx-auto border-t border-outline-variant/10">
+<div class="font-headline-lg text-headline-lg text-on-surface mb-8 tracking-[0.2em]">
+            QUISODO
+        </div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-24">
+<div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+                    © 2024 Quisodo Riverside Sanctuary. All rights reserved. Crafted for the discerning traveler.
+                </p>
+</div>
+<div class="flex flex-col md:flex-row md:justify-end gap-6 md:gap-12">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-tertiary-fixed-dim transition-all duration-300 opacity-80" href="#">Privacy Policy</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-tertiary-fixed-dim transition-all duration-300 opacity-80" href="#">Terms of Service</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-tertiary-fixed-dim transition-all duration-300 opacity-80" href="#">Sustainability</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-tertiary-fixed-dim transition-all duration-300 opacity-80" href="#">Press</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-tertiary-fixed-dim transition-all duration-300 opacity-80" href="#">Careers</a>
+</div>
+</div>
+</footer>
+<!-- Minimal JS for Navbar Background on Scroll -->
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const nav = document.getElementById('main-nav');
+            
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    nav.classList.add('shadow-[0_4px_30px_rgba(0,0,0,0.1)]');
+                } else {
+                    nav.classList.remove('shadow-[0_4px_30px_rgba(0,0,0,0.1)]');
+                }
+            });
+        });
+    </script>
+</body></html>

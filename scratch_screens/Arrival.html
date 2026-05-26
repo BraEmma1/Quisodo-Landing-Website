@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Transport Services - Quisodo</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600&amp;family=Bodoni+Moda:opsz,wght@6..96,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container-low": "#1c1c17",
+                      "inverse-surface": "#e6e2da",
+                      "secondary-fixed": "#f3e1bb",
+                      "on-tertiary-fixed": "#261900",
+                      "on-primary-fixed-variant": "#3b494c",
+                      "tertiary-fixed": "#ffdea5",
+                      "primary-fixed-dim": "#bac9cd",
+                      "surface-container": "#20201b",
+                      "surface-container-highest": "#363530",
+                      "on-background": "#e6e2da",
+                      "on-surface": "#e6e2da",
+                      "surface-tint": "#bac9cd",
+                      "on-secondary-fixed-variant": "#51462a",
+                      "on-tertiary-fixed-variant": "#5b430c",
+                      "surface": "#14130f",
+                      "on-primary-container": "#768488",
+                      "surface-variant": "#363530",
+                      "inverse-on-surface": "#31302b",
+                      "surface-dim": "#14130f",
+                      "tertiary": "#e6c17f",
+                      "on-secondary": "#392f16",
+                      "secondary-fixed-dim": "#d6c5a1",
+                      "outline": "#8d9193",
+                      "on-error-container": "#ffdad6",
+                      "outline-variant": "#424849",
+                      "primary": "#bac9cd",
+                      "tertiary-fixed-dim": "#e6c17f",
+                      "on-primary-fixed": "#101e21",
+                      "error": "#ffb4ab",
+                      "background": "#14130f",
+                      "surface-container-lowest": "#0f0e0a",
+                      "inverse-primary": "#526164",
+                      "on-surface-variant": "#c3c7c9",
+                      "surface-container-high": "#2b2a25",
+                      "on-tertiary-container": "#9c7d42",
+                      "primary-container": "#0d1b1e",
+                      "surface-bright": "#3a3934",
+                      "tertiary-container": "#231700",
+                      "error-container": "#93000a",
+                      "on-error": "#690005",
+                      "on-secondary-fixed": "#231a04",
+                      "on-secondary-container": "#c4b491",
+                      "secondary": "#d6c5a1",
+                      "secondary-container": "#51462a",
+                      "on-primary": "#253336",
+                      "on-tertiary": "#412d00",
+                      "primary-fixed": "#d6e5e9"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-desktop": "80px",
+                      "gutter": "32px",
+                      "margin-mobile": "24px",
+                      "container-max": "1440px",
+                      "section-gap": "160px"
+              },
+              "fontFamily": {
+                      "label-caps": [
+                              "Manrope"
+                      ],
+                      "headline-md": [
+                              "Bodoni Moda"
+                      ],
+                      "headline-lg": [
+                              "Bodoni Moda"
+                      ],
+                      "body-lg": [
+                              "Manrope"
+                      ],
+                      "display-xl-mobile": [
+                              "Bodoni Moda"
+                      ],
+                      "display-xl": [
+                              "Bodoni Moda"
+                      ],
+                      "body-md": [
+                              "Manrope"
+                      ],
+                      "headline-lg-mobile": [
+                              "Bodoni Moda"
+                      ]
+              },
+              "fontSize": {
+                      "label-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "100%",
+                                      "letterSpacing": "0.2em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "120%",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg": [
+                              "64px",
+                              {
+                                      "lineHeight": "110%",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "160%",
+                                      "letterSpacing": "0.01em",
+                                      "fontWeight": "300"
+                              }
+                      ],
+                      "display-xl-mobile": [
+                              "48px",
+                              {
+                                      "lineHeight": "100%",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-xl": [
+                              "84px",
+                              {
+                                      "lineHeight": "90%",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "160%",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "36px",
+                              {
+                                      "lineHeight": "110%",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .parallax-bg {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .glass-panel {
+            background: rgba(20, 19, 15, 0.4);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(141, 145, 147, 0.1);
+        }
+      </style>
+</head>
+<body class="bg-background text-on-background overflow-x-hidden min-h-screen flex flex-col">
+<!-- TopNavBar (Shared Component) -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-8 max-w-container-max mx-auto bg-surface/80 backdrop-blur-2xl transition-all duration-300" id="main-header">
+<!-- Mobile Menu Toggle (Hidden on MD) -->
+<button class="md:hidden text-on-surface hover:text-primary transition-colors duration-500 z-50">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu</span>
+</button>
+<a class="font-headline-md text-headline-md tracking-[0.2em] text-on-surface hover:opacity-80 transition-opacity z-50" href="#">QUISODO</a>
+<nav class="hidden md:flex gap-gutter items-center absolute left-1/2 -translate-x-1/2">
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-primary transition-colors duration-500 scale-95 duration-300 ease-in-out" href="#">Stay</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-primary transition-colors duration-500 scale-95 duration-300 ease-in-out" href="#">Experiences</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-primary transition-colors duration-500 scale-95 duration-300 ease-in-out" href="#">Boats</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-primary transition-colors duration-500 scale-95 duration-300 ease-in-out" href="#">Gallery</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-primary transition-colors duration-500 scale-95 duration-300 ease-in-out" href="#">Journal</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-primary transition-colors duration-500 scale-95 duration-300 ease-in-out" href="#">Contact</a>
+</nav>
+<button class="hidden md:flex px-6 py-3 border border-outline/20 text-on-surface font-label-caps text-label-caps hover:bg-secondary hover:text-primary-container hover:border-secondary transition-all duration-500 scale-95 duration-300 ease-in-out">Reserve</button>
+</header>
+<main class="flex-grow pt-[120px]">
+<!-- Hero Section -->
+<section class="relative min-h-[819px] flex items-center justify-center px-margin-mobile md:px-margin-desktop parallax-bg" data-alt="A cinematic, wide-angle shot of a luxurious dark-colored SUV driving on a serene, mist-covered road leading towards a river delta at dawn. The scene is bathed in a moody, cinematic 'Riverfront Noir' aesthetic with a color palette dominated by deep river navy, muted earth tones, and a soft, diffuse light emerging through the fog. The mood is tranquil, exclusive, and mysterious." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD02uwMWVnTAJRzOkLjAk6dfYtf5-jlxi4NPZYtf6m97Rle9cz6NFRWeFAxqGenzcQP3yl1ifx2zZ7_iRzKXqhs4wZbofH1SBKzYMZBdSdU9uSor__EHDPoj_QxVtNWpBL9YoJ3UqemkJb601Alq93nwK1TnnRqbSHef_akIHxrr-eY37N63wkoGJ-A5uqvgrEOMKNdXJEYidGbxHleHTD_Hg8KA0D-PkAj57XvhnKihul0AGF6YYZ6KdclfbAc3i8FI2XirW-N0Lbf');">
+<div class="absolute inset-0 bg-gradient-to-b from-surface/60 via-surface/30 to-surface pointer-events-none"></div>
+<div class="relative z-10 w-full max-w-container-max mx-auto text-center md:text-left flex flex-col md:flex-row items-end justify-between gap-12 pt-24 pb-12">
+<div class="max-w-2xl">
+<p class="font-label-caps text-label-caps text-tertiary mb-6 opacity-80 tracking-widest uppercase">Arrival &amp; Departure</p>
+<h1 class="font-display-xl-mobile text-display-xl-mobile md:font-display-xl md:text-display-xl text-on-surface mb-6 leading-tight">
+                        Seamless <br/><span class="text-surface-variant italic">Transitions</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl font-light">
+                        From the moment you touch down to your final departure, experience the quiet luxury of effortless movement. Our curated transport fleet ensures your journey to the sanctuary is as serene as the destination itself.
+                    </p>
+</div>
+<div class="glass-panel p-8 md:w-96 rounded-DEFAULT flex flex-col gap-6">
+<h3 class="font-headline-md text-headline-md text-on-surface">Book Your Transfer</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Arrange your private arrival experience directly with our concierge team.</p>
+<button class="mt-4 px-6 py-4 border border-outline/30 text-on-surface font-label-caps text-label-caps hover:bg-secondary hover:text-primary-container hover:border-secondary transition-all duration-500 w-full text-center flex justify-center items-center gap-2">
+                        Request Transport
+                        <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 0;">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Services Bento Grid -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="mb-24 md:w-1/2">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-on-surface mb-6">Curated Fleet</h2>
+<div class="w-24 h-px bg-tertiary/50 mb-8"></div>
+<p class="font-body-lg text-body-lg text-on-surface-variant font-light">
+                    Choose the mode of arrival that best suits your rhythm. Whether by road or river, our transport options are designed to extend the sanctuary experience beyond our borders.
+                </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter auto-rows-[400px]">
+<!-- Airport Pickups - Large Feature -->
+<div class="md:col-span-8 relative group overflow-hidden bg-surface-container-low">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-105" data-alt="A close-up, dramatic low-angle shot of the sleek front grille and headlights of a premium black SUV parked at an empty, modern airport terminal at dusk. The lighting is moody and cinematic, highlighting the reflective surfaces of the vehicle against the deep, dark background. The aesthetic is Riverfront Noir, emphasizing quiet luxury, sophistication, and a color palette of deep blacks, charcoal, and subtle amber streetlights." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBify3_h3wJDI6zDXG7au6OU1VpjWizUqC_dcN7cMq7WcNbTvrtw2oKMFYEoF56Kezw6_EYCpLhJEYePhfO4DmSSRwUPVRYq-F2jYMfWa-wYB6mxSVS3uKa_eF9qUW4FC13p0Aik2aawTlsyC5M5wRajW0lj0c6ZmMLmD1ULr7ykfYwvxN6gGpSHnYVLqEU_CGDDwCv6wWlDZcKTItqlXG0aR0I6E0vNpmyMJ01QBY56CtCzBxjegUgqwYCSlOiWt0UqOcBsLAOvkLP');"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/40 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 md:p-12 w-full flex flex-col md:flex-row justify-between items-end gap-6">
+<div class="max-w-md">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 0;">flight_land</span>
+<span class="font-label-caps text-label-caps text-tertiary">Kotoka International</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Airport Protocol</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Personalized meet-and-greet service at baggage claim, fast-track assistance, and immediate transition to our premium vehicles.</p>
+</div>
+</div>
+</div>
+<!-- Accra to Ada - Vertical Portrait -->
+<div class="md:col-span-4 relative group overflow-hidden bg-surface-container-low">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-105" data-alt="A stylized, editorial-style photograph looking out from the back seat of a luxury vehicle moving smoothly along a coastal highway. The interior details are sharp and premium (dark leather, polished trim), while the exterior scenery is blurred in motion, showcasing a hazy, atmospheric river landscape passing by. The color grading leans into deep, moody blues and greys, reflecting a serene and exclusive travel experience." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCdsYElXn4g52Fdeh2T-QPFBgDhlFpMMKgEddH0bTROxUwQU1uJAbt5yHWvhZpr8s-rwIhRXYElVFYMvNfuPiA0QJ6CeOrjIJFeBDrQOrg-gTzEcXgDuUTHLKsltreiHadd1VeLhsXnTv4jRDVdneGYHlyWot0hrN_kL4mMUhHVFnlp1jx_emneegMVO6yFbcwNX3Q3gS-lYnHcolO0-ebkEeiILjYUV2QvRxI3_hn9heXOqrO0QuZef0TV-EBYxY1s5rWxm03Ty4K7');"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 0;">directions_car</span>
+<span class="font-label-caps text-label-caps text-tertiary">City to Sanctuary</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Accra Transfers</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">A smooth 90-minute journey in our climate-controlled SUVs, featuring complimentary refreshments and Wi-Fi.</p>
+</div>
+</div>
+<!-- River Arrival - Full Width -->
+<div class="md:col-span-12 relative group overflow-hidden bg-surface-container-low mt-gutter h-[500px]">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-105" data-alt="A wide, cinematic drone shot over a dark, tranquil river showing a sleek, modern luxury speedboat cutting cleanly through the water at twilight. The surrounding landscape features dense, silhouetted mangroves against a dusky, muted sky. The aesthetic is heavily inspired by Riverfront Noir, with a color palette of deep river navy, charcoal, and subtle hints of faded gold reflecting on the water's surface, conveying an aura of quiet luxury and mystery." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB48sAiAEnwWWGkGxkcYU4LSufiiPBoF_G5Vl4WLGihmlJFbnLR4Xha2eaYYCw51zvYnHLsql7ZKj2vBu3egyF4xTyYomWkz5v8LKxtTrqgHVIhnAt8pvVWL3kgzSeFJ3J2mmIe8-hJs-EssaRhKo_p-cwDOZqH1oQVNtmNWTT-XekDjhvH-JC9dGoa3HdvT0BdFL7Ps1x4voj0ibUnIYblLrV2SONB_eC3Hfe9euifRLXFn5VHtMsfl905vp8mPZt_1hfOJXoBwPXR');"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-surface w-3/4 md:w-1/2"></div>
+<div class="absolute top-0 left-0 p-8 md:p-16 h-full flex flex-col justify-center max-w-xl">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 0;">sailing</span>
+<span class="font-label-caps text-label-caps text-tertiary">The Ultimate Entrance</span>
+</div>
+<h3 class="font-display-xl-mobile text-display-xl-mobile md:font-headline-lg md:text-headline-lg text-on-surface mb-6">River Arrival</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant font-light mb-8">
+                            For those seeking true immersion, bypass the roads entirely. Board our private launch at the estuary and arrive at the sanctuary via the winding waterways of the Volta, setting the tone for your stay.
+                        </p>
+<a class="group/btn flex items-center gap-4 w-fit" href="#">
+<span class="font-label-caps text-label-caps text-on-surface group-hover/btn:text-tertiary transition-colors">View Fleet Details</span>
+<div class="w-12 h-px bg-outline group-hover/btn:w-16 group-hover/btn:bg-tertiary transition-all duration-300"></div>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Booking Inquiry Form -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-4xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-on-surface mb-4">Arrange Transport</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant font-light">Provide your details, and our concierge will orchestrate your movement.</p>
+</div>
+<form class="space-y-12">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-gutter gap-y-12">
+<!-- Input Group -->
+<div class="relative group">
+<input class="w-full bg-transparent border-0 border-b border-inverse-surface/30 px-0 py-3 text-on-surface font-body-md focus:ring-0 focus:border-tertiary transition-colors peer" id="name" placeholder=" " type="text"/>
+<label class="absolute left-0 top-3 text-on-surface-variant font-label-caps text-label-caps transition-all peer-focus:-top-4 peer-focus:text-tertiary peer-focus:text-[10px] peer-not-placeholder-shown:-top-4 peer-not-placeholder-shown:text-[10px]" for="name">Guest Name</label>
+</div>
+<div class="relative group">
+<input class="w-full bg-transparent border-0 border-b border-inverse-surface/30 px-0 py-3 text-on-surface font-body-md focus:ring-0 focus:border-tertiary transition-colors peer" id="email" placeholder=" " type="email"/>
+<label class="absolute left-0 top-3 text-on-surface-variant font-label-caps text-label-caps transition-all peer-focus:-top-4 peer-focus:text-tertiary peer-focus:text-[10px] peer-not-placeholder-shown:-top-4 peer-not-placeholder-shown:text-[10px]" for="email">Email Address</label>
+</div>
+<div class="relative group">
+<input class="w-full bg-transparent border-0 border-b border-inverse-surface/30 px-0 py-3 text-on-surface font-body-md focus:ring-0 focus:border-tertiary transition-colors peer" id="flight" placeholder=" " type="text"/>
+<label class="absolute left-0 top-3 text-on-surface-variant font-label-caps text-label-caps transition-all peer-focus:-top-4 peer-focus:text-tertiary peer-focus:text-[10px] peer-not-placeholder-shown:-top-4 peer-not-placeholder-shown:text-[10px]" for="flight">Flight Details (Optional)</label>
+</div>
+<div class="relative group">
+<select class="w-full bg-transparent border-0 border-b border-inverse-surface/30 px-0 py-3 text-on-surface font-body-md focus:ring-0 focus:border-tertiary transition-colors appearance-none peer" id="service">
+<option class="bg-surface text-on-surface" value="">Select Service</option>
+<option class="bg-surface text-on-surface" value="airport">Airport Transfer</option>
+<option class="bg-surface text-on-surface" value="accra">Accra City Pickup</option>
+<option class="bg-surface text-on-surface" value="boat">River Arrival</option>
+</select>
+<span class="material-symbols-outlined absolute right-0 top-3 pointer-events-none text-on-surface-variant">expand_more</span>
+</div>
+</div>
+<div class="pt-8 text-center">
+<button class="px-12 py-4 border border-outline/30 text-on-surface font-label-caps text-label-caps hover:bg-secondary hover:text-primary-container hover:border-secondary transition-all duration-500 inline-flex items-center gap-3" type="submit">
+                            Submit Request
+                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 0;">send</span>
+</button>
+</div>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="bg-surface-container-lowest flex flex-col w-full px-margin-mobile md:px-margin-desktop py-section-gap max-w-container-max mx-auto border-t border-outline-variant/10">
+<div class="font-headline-lg text-headline-lg text-on-surface mb-8">
+            QUISODO
+        </div>
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-12">
+<div class="flex flex-col gap-6">
+<nav class="flex flex-wrap gap-x-8 gap-y-4">
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-tertiary-fixed-dim transition-all duration-300 opacity-80" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-tertiary-fixed-dim transition-all duration-300 opacity-80" href="#">Terms of Service</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-tertiary-fixed-dim transition-all duration-300 opacity-80" href="#">Sustainability</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-tertiary-fixed-dim transition-all duration-300 opacity-80" href="#">Press</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-tertiary-fixed-dim transition-all duration-300 opacity-80" href="#">Careers</a>
+</nav>
+</div>
+<div class="text-tertiary font-body-md text-body-md max-w-sm text-right">
+                © 2024 Quisodo Riverside Sanctuary. All rights reserved. Crafted for the discerning traveler.
+            </div>
+</div>
+</footer>
+<script>
+        // Simple header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('main-header');
+            if (window.scrollY > 50) {
+                header.classList.add('py-4');
+                header.classList.remove('py-8');
+            } else {
+                header.classList.add('py-8');
+                header.classList.remove('py-4');
+            }
+        });
+    </script>
+</body></html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Curated Experiences - Quisodo Riverside Sanctuary</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-low": "#1c1c17",
+                        "inverse-surface": "#e6e2da",
+                        "secondary-fixed": "#f3e1bb",
+                        "on-tertiary-fixed": "#261900",
+                        "on-primary-fixed-variant": "#3b494c",
+                        "tertiary-fixed": "#ffdea5",
+                        "primary-fixed-dim": "#bac9cd",
+                        "surface-container": "#20201b",
+                        "surface-container-highest": "#363530",
+                        "on-background": "#e6e2da",
+                        "on-surface": "#e6e2da",
+                        "surface-tint": "#bac9cd",
+                        "on-secondary-fixed-variant": "#51462a",
+                        "on-tertiary-fixed-variant": "#5b430c",
+                        "surface": "#14130f",
+                        "on-primary-container": "#768488",
+                        "surface-variant": "#363530",
+                        "inverse-on-surface": "#31302b",
+                        "surface-dim": "#14130f",
+                        "tertiary": "#e6c17f",
+                        "on-secondary": "#392f16",
+                        "secondary-fixed-dim": "#d6c5a1",
+                        "outline": "#8d9193",
+                        "on-error-container": "#ffdad6",
+                        "outline-variant": "#424849",
+                        "primary": "#bac9cd",
+                        "tertiary-fixed-dim": "#e6c17f",
+                        "on-primary-fixed": "#101e21",
+                        "error": "#ffb4ab",
+                        "background": "#14130f",
+                        "surface-container-lowest": "#0f0e0a",
+                        "inverse-primary": "#526164",
+                        "on-surface-variant": "#c3c7c9",
+                        "surface-container-high": "#2b2a25",
+                        "on-tertiary-container": "#9c7d42",
+                        "primary-container": "#0d1b1e",
+                        "surface-bright": "#3a3934",
+                        "tertiary-container": "#231700",
+                        "error-container": "#93000a",
+                        "on-error": "#690005",
+                        "on-secondary-fixed": "#231a04",
+                        "on-secondary-container": "#c4b491",
+                        "secondary": "#d6c5a1",
+                        "secondary-container": "#51462a",
+                        "on-primary": "#253336",
+                        "on-tertiary": "#412d00",
+                        "primary-fixed": "#d6e5e9"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "80px",
+                        "gutter": "32px",
+                        "margin-mobile": "24px",
+                        "container-max": "1440px",
+                        "section-gap": "160px"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["Manrope", "sans-serif"],
+                        "headline-md": ["Bodoni Moda", "serif"],
+                        "headline-lg": ["Bodoni Moda", "serif"],
+                        "body-lg": ["Manrope", "sans-serif"],
+                        "display-xl-mobile": ["Bodoni Moda", "serif"],
+                        "display-xl": ["Bodoni Moda", "serif"],
+                        "body-md": ["Manrope", "sans-serif"],
+                        "headline-lg-mobile": ["Bodoni Moda", "serif"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["12px", { "lineHeight": "100%", "letterSpacing": "0.2em", "fontWeight": "600" }],
+                        "headline-md": ["32px", { "lineHeight": "120%", "fontWeight": "400" }],
+                        "headline-lg": ["64px", { "lineHeight": "110%", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "160%", "letterSpacing": "0.01em", "fontWeight": "300" }],
+                        "display-xl-mobile": ["48px", { "lineHeight": "100%", "fontWeight": "400" }],
+                        "display-xl": ["84px", { "lineHeight": "90%", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "160%", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["36px", { "lineHeight": "110%", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Manrope:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        /* Hide scrollbar for clean horizontal scrolling */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+        .reveal-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased selection:bg-tertiary selection:text-on-tertiary">
+<!-- TopNavBar JSON Component -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-8 max-w-container-max mx-auto bg-surface/80 backdrop-blur-2xl">
+<div class="hidden md:flex items-center gap-8">
+<nav class="flex gap-8">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-500 uppercase" href="#">Stay</a>
+<a class="font-label-caps text-label-caps text-primary border-b border-primary pb-1 uppercase" href="#">Experiences</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-500 uppercase" href="#">Boats</a>
+</nav>
+</div>
+<div class="flex-1 flex justify-start md:justify-center">
+<a class="font-headline-md text-headline-md tracking-[0.2em] text-on-surface uppercase" href="#">QUISODO</a>
+</div>
+<div class="flex items-center gap-8">
+<nav class="hidden md:flex gap-8">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-500 uppercase" href="#">Gallery</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-500 uppercase" href="#">Journal</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-500 uppercase" href="#">Contact</a>
+</nav>
+<button class="hidden md:block font-label-caps text-label-caps uppercase border border-outline-variant/30 px-6 py-3 hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-colors duration-300">Reserve</button>
+<button class="md:hidden text-on-surface hover:text-primary transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu</span>
+</button>
+</div>
+</header>
+<main class="w-full">
+<!-- Hero Section -->
+<section class="relative w-full h-[819px] md:h-screen flex flex-col justify-end px-margin-mobile md:px-margin-desktop pb-section-gap overflow-hidden">
+<!-- Background Image -->
+<div class="absolute inset-0 z-0 bg-surface-container-lowest">
+<img alt="River at dusk" class="w-full h-full object-cover opacity-60" data-alt="A wide, cinematic shot of a calm river at dusk, viewed from a luxurious, modern wooden deck. The sky is painted in deep indigos and muted golds, reflecting off the still water. The scene embodies a 'Quiet Luxury' aesthetic, with minimal, elegant elements in the foreground creating a sense of serene isolation. High contrast between the dark water and the subtle ambient lighting creates a mysterious, sophisticated mood." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0WYuYoDx3031SfgFFtnPdnPP9yjKtNkrIdqcmOq4ul9eT4JpqQsIkiCCUVExCPxrEErsiI-opK7kFopsl3_FV4Bb926lyfpbUlfKQ5WF16C1UlL_SYBll3yjGyYedIcOXIffks1OUdoFMWmfYay6IXgpGqFK0ZSIaTCvp3TsLo2JCLbMXw3nb5lVFnHmen6f-g1wieUSbuW2hmaOUnK6WwLxZCPK4yPnSBujc1q1nO2htoo-NwRsJYmhmQMwryK4YoYj1fuWUUjup"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/40 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto w-full">
+<p class="font-label-caps text-label-caps text-tertiary uppercase mb-6 tracking-widest">The Sanctuary</p>
+<h1 class="font-display-xl-mobile text-display-xl-mobile md:font-display-xl md:text-display-xl text-on-surface max-w-4xl leading-tight">
+                    Curated encounters with the current.
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mt-8">
+                    Step beyond the ordinary. Our carefully orchestrated experiences are designed to immerse you in the raw beauty and quiet rhythms of the river delta.
+                </p>
+</div>
+</section>
+<!-- Editorial Grid Section -->
+<section class="w-full px-margin-mobile md:px-margin-desktop py-section-gap max-w-container-max mx-auto">
+<div class="grid grid-cols-12 gap-y-16 md:gap-gutter">
+<!-- Sunset Cruises (Large, spanning) -->
+<div class="col-span-12 md:col-span-8 group cursor-pointer reveal-on-scroll">
+<div class="relative w-full aspect-[16/9] md:aspect-[21/9] overflow-hidden mb-6 bg-surface-container">
+<img alt="Luxury boat at sunset" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 opacity-80 group-hover:opacity-100" data-alt="A sleek, dark-wood luxury boat gliding silently down a misty river during twilight. The scene is lit by the soft, warm glow of the boat's minimal deck lights and the fading sunset, creating a 'Riverfront Noir' atmosphere. The aesthetic is highly polished and editorial, emphasizing quiet luxury and exclusive access to nature. The color palette is dominated by deep blacks, rich river navy, and muted gold accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoHYzL6RgWjGU1Qh796SqsxMuLUdtjhh1tZc33Npufm0YqMmkN_xpZpeZcu0Hy4jK44Yo3-YbP_BrLby4otv8lbWUSpOhrtf6v24s64K-N3ZjSbdVwu39A5NjbeSOtI4S3aOd8zFqybMHH2ubqVGjrTSKbnx1Fljef6fY0qF6_EziEMKiKCIDbR4NelTknb-xH5KvCPmJz2HpzEX9eDFNW5y2X_X_Y8-VQGRpxjPuqC-CK0XIeMZD7oCp_BLC1NfSb9uZoe2dDZ4ZW"/>
+</div>
+<div class="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-2">Twilight Navigation</h2>
+<p class="font-label-caps text-label-caps text-tertiary uppercase">Sunset Cruises</p>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant md:max-w-sm">
+                            Drift silently as the sky turns to bruised violet and gold. A private vessel, vintage champagne, and the unbroken horizon.
+                        </p>
+</div>
+</div>
+<!-- Local Culture (Offset right) -->
+<div class="col-span-12 md:col-span-4 md:col-start-9 md:-mt-32 group cursor-pointer reveal-on-scroll">
+<div class="relative w-full aspect-[3/4] overflow-hidden mb-6 bg-surface-container">
+<img alt="Local artisan hands" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 opacity-80 group-hover:opacity-100 filter grayscale group-hover:grayscale-0" data-alt="An intimate, editorial-style photograph of a local artisan's hands working on a traditional woven textile, illuminated by dramatic, high-contrast natural light from a nearby window. The scene is captured in a way that feels sophisticated and deeply respectful, aligning with a quiet luxury brand identity. The background is a moody, out-of-focus dark space, drawing all attention to the texture and detail of the craftsmanship." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiLsYl8mxjmV93gfRrxOQG9bs4UHRrXWahUJJrMmFbM4yU7ajNFiHhMoQc1LQNsaqQnnvrRLoEfecxqffQJdBvrzQ39Y9JaWlrsilnqoytmg3TQ1CyRtj0mkioNjWiwgvXtLFAaw1WoBQZs5GMTTgZGcweH1FGVZI-aIBf8T82tT7_wBVwPBgFN0aVU_izEii5nbV9nDe9sLm0YUW5zaK6t2UhsziNIbX4ukSbeRIlUafFvLkktUZYvVo7UmcqsqOo25SVBStDPzQc"/>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-2">Artisan Dialogues</h2>
+<p class="font-label-caps text-label-caps text-tertiary uppercase">Local Culture</p>
+</div>
+<!-- Nature Exploration (Left aligned, wide) -->
+<div class="col-span-12 md:col-span-6 md:mt-24 group cursor-pointer reveal-on-scroll">
+<div class="relative w-full aspect-square md:aspect-[4/3] overflow-hidden mb-6 bg-surface-container">
+<img alt="Misty mangrove forest" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 opacity-80 group-hover:opacity-100" data-alt="A dense, ancient mangrove forest viewed from water level, shrouded in a light, mysterious morning mist. The lighting is cinematic, with a few soft rays of light piercing the dark canopy, highlighting the complex root structures. The overall mood is serene and untouched, reflecting an exclusive, high-end exploration experience within a 'Riverfront Noir' visual style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVyx0b9ZsuvfrBXvTMzneApOfJAE90h-9ye_XlzTgwT-KGYbL3RdUocrV4GNM7bpUvUXpbanHyY3-zCtK2M_8xOzmt8Z_c0c_o8_oZpTJuJL-LUKdoSRpw0d91B5Yadpw-PCtKJUeTQp4EwWq3CAbBY8_2t6D13Jy77-iCEOBr45gZCc1XRFrncP8q_Yk_m6O_Bg4LNYSqcty36tojt8Dbz-Uc5z3pjoaDSNsYvgxNXjaHeOfdnzkE2nFgDwz_bZdPMn6EIMSluBMU"/>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-2">Delta Expeditions</h2>
+<p class="font-label-caps text-label-caps text-tertiary uppercase mb-4">Nature Exploration</p>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+                        Guided excursions into the deeper sanctuaries of the river. Witness untouched ecology through the lens of profound silence.
+                    </p>
+</div>
+<!-- Couples Packages (Right aligned, portrait) -->
+<div class="col-span-12 md:col-span-5 md:col-start-8 md:mt-48 group cursor-pointer reveal-on-scroll">
+<div class="relative w-full aspect-[4/5] overflow-hidden mb-6 bg-surface-container border border-outline-variant/20 p-4">
+<img alt="Romantic candlelit dinner setup" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 opacity-70 group-hover:opacity-100" data-alt="A private, exquisitely set dining table for two on an isolated wooden pier extending into a dark, still river at night. The table is illuminated solely by flickering candlelight, which casts long, romantic shadows. The background is an expansive dark space, emphasizing intimacy and luxury. The setting feels intensely private and cinematic, perfect for a sophisticated couples retreat." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXQZ9YYB7sDJCIAgQ2CULsy-0bRZwWxXlRLgRtvnlrvpvynE-_yhNLmk4NM_CwWJFLmhSQXgY8oei2b2VE3sVPv8qA6LU0v1aAs_4Jy4m_ciPaX6Elr10A-TfZIVqsQgX-51bSJhKyzeVYEqkqMLWHRPGwS8Osre73GDh0isIKChWjdVvIVfSiG2Cx1Ww5r2mzyAvj74Zh_qoWJSGviKoLehZDjNdoFTWYkkWSpQwMK1WuwZzlTryJzIIaum-Z2gZ26_dLp-DNO0Ar"/>
+</div>
+<div class="text-center md:text-left md:pl-4">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-2">Isolation Elegance</h2>
+<p class="font-label-caps text-label-caps text-tertiary uppercase mb-6">Couples Packages</p>
+<button class="font-label-caps text-label-caps uppercase text-on-surface border-b border-on-surface pb-1 hover:text-primary hover:border-primary transition-colors duration-300">View Itinerary</button>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section (Glassmorphism card) -->
+<section class="w-full px-margin-mobile md:px-margin-desktop pb-section-gap max-w-container-max mx-auto">
+<div class="relative w-full overflow-hidden p-12 md:p-24 flex flex-col items-center text-center">
+<div class="absolute inset-0 bg-surface-container-high/50 backdrop-blur-3xl border border-outline-variant/10"></div>
+<div class="relative z-10 max-w-2xl">
+<span class="material-symbols-outlined text-tertiary mb-6" style="font-variation-settings: 'FILL' 0; font-size: 32px;">explore</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-on-surface mb-8">Tailor Your Narrative</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12">
+                        Our concierge is available to construct a bespoke itinerary that aligns perfectly with your distinct definition of escape.
+                    </p>
+<button class="font-label-caps text-label-caps uppercase border border-outline-variant/50 px-8 py-4 text-on-surface hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-colors duration-500 tracking-widest">Inquire</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer JSON Component -->
+<footer class="flex flex-col w-full px-margin-mobile md:px-margin-desktop py-section-gap max-w-container-max mx-auto border-t border-outline-variant/10 bg-surface-container-lowest">
+<div class="font-headline-lg text-headline-lg text-on-surface mb-8">
+            QUISODO
+        </div>
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
+<nav class="flex flex-col md:flex-row gap-4 md:gap-8 opacity-80">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-tertiary-fixed-dim transition-all duration-300 uppercase" href="#">Privacy Policy</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-tertiary-fixed-dim transition-all duration-300 uppercase" href="#">Terms of Service</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-tertiary-fixed-dim transition-all duration-300 uppercase" href="#">Sustainability</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-tertiary-fixed-dim transition-all duration-300 uppercase" href="#">Press</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-tertiary-fixed-dim transition-all duration-300 uppercase" href="#">Careers</a>
+</nav>
+<p class="font-body-md text-body-md text-tertiary max-w-xs md:text-right">
+                © 2024 Quisodo Riverside Sanctuary. All rights reserved. Crafted for the discerning traveler.
+            </p>
+</div>
+</footer>
+<script>
+        // Simple reveal on scroll script for editorial feel
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.reveal-on-scroll');
+            
+            const revealOnScroll = () => {
+                const windowHeight = window.innerHeight;
+                const elementVisible = 100;
+                
+                reveals.forEach(reveal => {
+                    const elementTop = reveal.getBoundingClientRect().top;
+                    if (elementTop < windowHeight - elementVisible) {
+                        reveal.classList.add('is-visible');
+                    }
+                });
+            };
+
+            window.addEventListener('scroll', revealOnScroll);
+            revealOnScroll(); // Trigger on load
+        });
+    </script>
+</body></html>
