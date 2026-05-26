@@ -39,7 +39,7 @@ export default function Journal() {
             </figcaption>
           </figure>
 
-          <h2 className="font-display-xl text-headline-md text-on-surface mt-12 mb-6">
+          <h2 className="font-display-xl text-2xl sm:text-3xl md:text-4xl text-on-surface mt-12 mb-6 leading-tight tracking-tight">
             The Architecture of Silence
           </h2>
           <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed">
@@ -273,7 +273,7 @@ export default function Journal() {
               <span className="font-label-caps text-label-caps text-tertiary mb-4 block uppercase tracking-wider">
                 {featuredArticle.category}
               </span>
-              <h2 className="font-display-xl text-headline-lg-mobile md:text-headline-md text-on-surface mb-6 leading-tight">
+              <h2 className="font-display-xl text-3xl sm:text-4xl md:text-5xl text-on-surface mb-6 leading-[1.05] tracking-tight">
                 {featuredArticle.title}
               </h2>
               <p className="font-body-md text-body-md text-on-surface-variant mb-8">

@@ -97,8 +97,8 @@ export default function Boats() {
       <section className="w-full py-section-gap overflow-hidden bg-background">
         <div className="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-16 flex flex-col md:flex-row justify-between items-end gap-8">
           <ScrollReveal>
-            <h2 className="font-display-xl text-headline-lg-mobile md:text-headline-lg text-on-surface mb-4">
-              Our Fleet
+            <h2 className="font-display-xl text-4xl sm:text-5xl md:text-[56px] lg:text-[64px] text-on-surface mb-4 leading-[1.05] tracking-tight">
+              Our <span className="italic font-light text-tertiary">Fleet</span>
             </h2>
             <p className="font-body-lg text-body-lg text-on-surface-variant max-w-md">
               Curated vessels for every tempo of the river. Navigate in unmatched style.

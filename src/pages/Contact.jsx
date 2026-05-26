@@ -112,7 +112,7 @@ export default function Contact() {
             {isSubmitted ? (
               <div className="flex flex-col items-center justify-center text-center py-20 animate-fadeIn">
                 <span className="material-symbols-outlined text-6xl text-tertiary mb-6">sailing</span>
-                <h2 className="font-headline-md text-headline-md text-on-surface mb-4">Inquiry Received</h2>
+                <h2 className="font-display-xl text-2xl sm:text-3xl text-on-surface mb-4 tracking-tight">Inquiry Received</h2>
                 <p className="font-body-lg text-body-lg text-on-surface-variant max-w-md mb-8">
                   Thank you for reaching out to Quisodo. Our dedicated privacy and bookings concierge will contact you within 24 hours.
                 </p>
@@ -125,7 +125,7 @@ export default function Contact() {
               </div>
             ) : (
               <>
-                <h2 className="font-headline-md text-headline-md text-on-surface mb-12">Send an Inquiry</h2>
+                <h2 className="font-display-xl text-2xl sm:text-3xl text-on-surface mb-12 tracking-tight">Send an Inquiry</h2>
                 <form onSubmit={handleSubmit} className="space-y-12">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                     {/* First Name */}

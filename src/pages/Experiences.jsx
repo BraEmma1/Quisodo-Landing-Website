@@ -156,8 +156,8 @@ export default function Experiences() {
             <span className="material-symbols-outlined text-tertiary mb-6 text-4xl">
               explore
             </span>
-            <h2 className="font-headline-lg-mobile text-3xl md:font-headline-lg md:text-headline-lg text-on-surface mb-8">
-              Tailor Your Narrative
+            <h2 className="font-display-xl text-4xl sm:text-5xl md:text-[56px] lg:text-[64px] text-on-surface mb-8 leading-[1.05] tracking-tight">
+              Tailor Your <span className="italic font-light text-tertiary">Narrative</span>
             </h2>
             <p className="font-body-lg text-body-lg text-on-surface-variant mb-12 leading-relaxed">
               Our concierge is available to construct a bespoke itinerary that aligns perfectly with your distinct definition of escape.

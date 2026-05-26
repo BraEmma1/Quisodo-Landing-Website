@@ -66,8 +66,8 @@ export default function Arrival() {
       <section className="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
         <div className="mb-24 md:w-1/2">
           <ScrollReveal>
-            <h2 className="font-display-xl text-headline-lg-mobile md:text-headline-lg text-on-surface mb-6">
-              Curated Fleet
+            <h2 className="font-display-xl text-4xl sm:text-5xl md:text-[56px] lg:text-[64px] text-on-surface mb-6 leading-[1.05] tracking-tight">
+              Curated <span className="italic font-light text-tertiary">Fleet</span>
             </h2>
             <div className="w-24 h-px bg-tertiary/50 mb-8"></div>
             <p className="font-body-lg text-body-lg text-on-surface-variant font-light">
@@ -140,8 +140,8 @@ export default function Arrival() {
                   <span className="material-symbols-outlined text-tertiary">sailing</span>
                   <span className="font-label-caps text-label-caps text-tertiary">The Ultimate Entrance</span>
                 </div>
-                <h3 className="font-display-xl text-headline-lg-mobile md:text-headline-lg text-white mb-6">
-                  River Arrival
+                <h3 className="font-display-xl text-4xl sm:text-5xl md:text-[56px] lg:text-[64px] text-white mb-6 leading-[1.05] tracking-tight">
+                  River <span className="italic font-light text-tertiary">Arrival</span>
                 </h3>
                 <p className="font-body-lg text-body-lg text-white/70 font-light mb-8">
                   For those seeking true immersion, bypass the roads entirely. Board our private launch at the estuary and arrive at the sanctuary via the winding waterways of the Volta, setting the tone for your stay.
@@ -168,8 +168,8 @@ export default function Arrival() {
       >
         <div className="max-w-4xl mx-auto text-left">
           <ScrollReveal className="text-center mb-16">
-            <h2 className="font-display-xl text-headline-lg-mobile md:text-headline-lg text-on-surface mb-4">
-              Arrange Transport
+            <h2 className="font-display-xl text-4xl sm:text-5xl md:text-[56px] lg:text-[64px] text-on-surface mb-4 leading-[1.05] tracking-tight">
+              Arrange <span className="italic font-light text-tertiary">Transport</span>
             </h2>
             <p className="font-body-lg text-body-lg text-on-surface-variant font-light">
               Provide your details, and our concierge will orchestrate your movement.

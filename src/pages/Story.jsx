@@ -49,8 +49,8 @@ export default function Story() {
             </div>
             <div className="w-full md:w-7/12 order-1 md:order-2 space-y-8">
               <ScrollReveal delay={200}>
-                <h2 className="font-display-xl text-headline-lg-mobile md:text-headline-lg text-on-surface mb-6">
-                  The Culture of Ada
+                <h2 className="font-display-xl text-4xl sm:text-5xl md:text-[56px] lg:text-[64px] text-on-surface mb-6 leading-[1.05] tracking-tight">
+                  The Culture of <span className="italic font-light text-tertiary">Ada</span>
                 </h2>
                 <div className="w-12 h-[1px] bg-primary mb-6"></div>
                 <div className="space-y-6">
@@ -83,8 +83,8 @@ export default function Story() {
                 <span className="font-label-caps text-label-caps text-primary tracking-widest block uppercase">
                   02 // Design philosophy
                 </span>
-                <h2 className="font-display-xl text-headline-lg-mobile md:text-headline-lg text-on-surface">
-                  Quiet Luxury &amp; Architectural Restraint
+                <h2 className="font-display-xl text-4xl sm:text-5xl md:text-[56px] lg:text-[64px] text-on-surface leading-[1.05] tracking-tight">
+                  Quiet <span className="italic font-light text-tertiary">Luxury</span> &amp; Architectural Restraint
                 </h2>
                 <div className="w-12 h-[1px] bg-primary my-6"></div>
                 <p className="font-body-md text-body-md text-on-surface-variant">

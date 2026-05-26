@@ -88,6 +88,8 @@ function RoomImageSlider({ images, alt }) {
 export default function Stay() {
   const navigate = useNavigate();
   const [filter, setFilter] = useState('all'); // 'all', 'suites', 'villas'
+  const [isRatesOpen, setIsRatesOpen] = useState(false);
+  const [selectedSeason, setSelectedSeason] = useState('green'); // 'green' or 'high'
 
   const accommodations = [
     {
@@ -98,6 +100,7 @@ export default function Stay() {
       tagline: 'IDEAL ESCAPES FOR UNWINDING WITH LOVED ONES AND FRIENDS',
       description: 'TWO SINGLE BEDS (OR LARGE KING SIZE) • EN SUITE BATHROOM WITH OUTSIDE SHOWER • TEA AND COFFEE FACILITIES • PATIO • HAIRDRYERS',
       price: 850,
+      highPrice: 980,
       images: [
         room3,
         room1
@@ -111,6 +114,7 @@ export default function Stay() {
       tagline: 'PRIVATE SANCTUARY AMONGST THE TREES',
       description: '120 SQM • PRIVATE PLUNGE POOL • KING SIZE BED • EN SUITE SPA BATHROOM • DEDICATED STUDY • OUTDOOR LOUNGE • MINI BAR • WIFI • SMART TECH',
       price: 1200,
+      highPrice: 1450,
       images: [
         room4,
         room2
@@ -158,7 +162,7 @@ export default function Stay() {
 
         <ScrollReveal delay={200}>
           <button
-            onClick={() => navigate('/reserve')}
+            onClick={() => setIsRatesOpen(true)}
             className="font-label-caps text-label-caps text-on-surface border border-outline-variant/30 px-10 py-4 hover:bg-surface-variant hover:border-surface-variant transition-all duration-300 active:scale-95 cursor-pointer"
           >
             VIEW RATES
@@ -179,8 +183,8 @@ export default function Stay() {
                   <span className="font-label-caps text-label-caps text-tertiary mb-3 tracking-[0.2em] uppercase">
                     SUITE
                   </span>
-                  <h2 className="font-display-xl text-headline-lg-mobile md:text-headline-md lg:text-headline-lg text-on-surface mb-8 uppercase tracking-[0.1em] leading-tight">
-                    The Volta Suite
+                  <h2 className="font-display-xl text-4xl sm:text-5xl md:text-[56px] lg:text-[64px] text-on-surface mb-8 tracking-tight leading-[1.05]">
+                    The Volta <span className="italic font-light text-tertiary">Suite</span>
                   </h2>
                   <div className="space-y-6 max-w-sm">
                     <p className="font-label-caps text-[11px] leading-[1.8] text-on-surface-variant tracking-[0.15em] font-semibold uppercase">
@@ -195,7 +199,7 @@ export default function Stay() {
                     </div>
                     <div className="flex flex-wrap items-center justify-center gap-4 pt-8">
                       <button
-                        onClick={() => navigate('/reserve')}
+                        onClick={() => navigate('/reserve', { state: { room: 'river-suite' } })}
                         className="font-label-caps text-label-caps text-on-surface border border-outline-variant/30 px-8 py-3.5 hover:bg-tertiary hover:border-tertiary hover:text-surface transition-all duration-300 cursor-pointer active:scale-95"
                       >
                         BOOK NOW
@@ -242,8 +246,8 @@ export default function Stay() {
                   <span className="font-label-caps text-label-caps text-tertiary mb-3 tracking-[0.2em] uppercase">
                     VILLA
                   </span>
-                  <h2 className="font-display-xl text-headline-lg-mobile md:text-headline-md lg:text-headline-lg text-on-surface mb-8 uppercase tracking-[0.1em] leading-tight">
-                    Canopy Villa
+                  <h2 className="font-display-xl text-4xl sm:text-5xl md:text-[56px] lg:text-[64px] text-on-surface mb-8 tracking-tight leading-[1.05]">
+                    Canopy <span className="italic font-light text-tertiary">Villa</span>
                   </h2>
                   <div className="space-y-6 max-w-sm">
                     <p className="font-label-caps text-[11px] leading-[1.8] text-on-surface-variant tracking-[0.15em] font-semibold uppercase">
@@ -258,7 +262,7 @@ export default function Stay() {
                     </div>
                     <div className="flex flex-wrap items-center justify-center gap-4 pt-8">
                       <button
-                        onClick={() => navigate('/reserve')}
+                        onClick={() => navigate('/reserve', { state: { room: 'canopy-villa' } })}
                         className="font-label-caps text-label-caps text-on-surface border border-outline-variant/30 px-8 py-3.5 hover:bg-tertiary hover:border-tertiary hover:text-surface transition-all duration-300 cursor-pointer active:scale-95"
                       >
                         BOOK NOW
@@ -278,6 +282,174 @@ export default function Stay() {
 
         </div>
       </section>
+
+      {/* Rate Card Modal Overlay */}
+      {isRatesOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-6 bg-black/85 backdrop-blur-md animate-fadeIn">
+          {/* Main Modal Container */}
+          <div className="relative w-full max-w-4xl bg-surface-container-lowest border border-outline-variant/10 rounded-xl overflow-hidden shadow-2xl flex flex-col md:flex-row max-h-[90vh] md:max-h-[85vh] animate-scaleIn">
+            
+            {/* Close Button */}
+            <button
+              onClick={() => setIsRatesOpen(false)}
+              className="absolute top-6 right-6 z-30 text-on-surface hover:text-primary transition-colors focus:outline-none cursor-pointer"
+              aria-label="Close modal"
+            >
+              <span className="material-symbols-outlined text-2xl">close</span>
+            </button>
+
+            {/* Left Panel: Pricing & Cards (Scrollable) */}
+            <div className="flex-1 p-8 md:p-12 overflow-y-auto flex flex-col gap-8">
+              <div>
+                <span className="font-label-caps text-label-caps text-tertiary mb-2 block tracking-[0.2em] uppercase text-xs">
+                  SANCTUARY RATES
+                </span>
+                <h3 className="font-display-xl text-3xl md:text-4xl text-on-surface mb-2 tracking-tight">
+                  Seasonal Rate Card
+                </h3>
+                <p className="font-body-md text-on-surface-variant text-sm">
+                  Rates vary by season. Select your planned escape period to view details.
+                </p>
+              </div>
+
+              {/* Season Selector Switch */}
+              <div className="flex bg-surface-container-high/40 p-1 rounded-lg border border-outline-variant/10 max-w-md">
+                <button
+                  onClick={() => setSelectedSeason('green')}
+                  className={`flex-1 py-3 px-4 rounded-md font-label-caps text-[11px] tracking-wider transition-all duration-300 focus:outline-none cursor-pointer uppercase ${
+                    selectedSeason === 'green'
+                      ? 'bg-surface text-primary shadow-sm font-semibold'
+                      : 'text-on-surface-variant hover:text-on-surface'
+                  }`}
+                >
+                  Green Season <span className="block text-[9px] font-normal lowercase opacity-75">(May – Oct)</span>
+                </button>
+                <button
+                  onClick={() => setSelectedSeason('high')}
+                  className={`flex-1 py-3 px-4 rounded-md font-label-caps text-[11px] tracking-wider transition-all duration-300 focus:outline-none cursor-pointer uppercase ${
+                    selectedSeason === 'high'
+                      ? 'bg-surface text-primary shadow-sm font-semibold'
+                      : 'text-on-surface-variant hover:text-on-surface'
+                  }`}
+                >
+                  High Season <span className="block text-[9px] font-normal lowercase opacity-75">(Nov – Apr)</span>
+                </button>
+              </div>
+
+              {/* Room Cards Stack */}
+              <div className="flex flex-col gap-6">
+                {accommodations.map((room) => {
+                  const currentPrice = selectedSeason === 'green' ? room.price : room.highPrice;
+                  const reserveRoomId = room.id === 'volta-suite' ? 'river-suite' : 'canopy-villa';
+                  
+                  return (
+                    <div 
+                      key={room.id}
+                      className="group flex flex-col sm:flex-row gap-6 p-5 rounded-lg border border-outline-variant/15 hover:border-outline/40 bg-surface-container-low/30 hover:bg-surface-container-low/50 transition-all duration-300"
+                    >
+                      {/* Image Thumbnail */}
+                      <div className="w-full sm:w-1/3 aspect-[4/3] rounded-md overflow-hidden bg-surface-container relative">
+                        <img 
+                          className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" 
+                          src={room.images[0]} 
+                          alt={room.title}
+                        />
+                      </div>
+
+                      {/* Room Pricing Details */}
+                      <div className="flex-1 flex flex-col justify-between">
+                        <div>
+                          <div className="flex justify-between items-start gap-4 mb-2">
+                            <h4 className="font-display-xl text-xl md:text-2xl text-on-surface group-hover:text-primary transition-colors">
+                              {room.title}
+                            </h4>
+                            <div className="text-right">
+                              <span className="block font-label-caps text-[9px] text-on-surface-variant uppercase">
+                                Rate / Night
+                              </span>
+                              <span className="font-headline-md text-xl md:text-2xl text-tertiary">
+                                ${currentPrice}
+                              </span>
+                            </div>
+                          </div>
+                          <p className="font-body-md text-xs text-on-surface-variant line-clamp-2 mb-4 leading-relaxed">
+                            {room.description}
+                          </p>
+                        </div>
+
+                        <div className="flex items-center justify-between border-t border-outline-variant/10 pt-4 mt-auto">
+                          <span className="font-label-caps text-[10px] text-on-surface-variant tracking-wider uppercase">
+                            {room.type === 'suite' ? '85 SQM • Plunge Pool' : '120 SQM • Private Villa'}
+                          </span>
+                          <button
+                            onClick={() => {
+                              setIsRatesOpen(false);
+                              navigate('/reserve', { state: { room: reserveRoomId } });
+                            }}
+                            className="font-label-caps text-[10px] tracking-wider text-primary border-b border-primary hover:text-tertiary hover:border-tertiary pb-0.5 transition-all focus:outline-none cursor-pointer uppercase"
+                          >
+                            Book Room
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Right Panel: Inclusions & Policies */}
+            <div className="md:w-1/3 bg-surface-container-low p-8 md:p-12 border-t md:border-t-0 md:border-l border-outline-variant/10 flex flex-col justify-between overflow-y-auto">
+              <div className="space-y-8">
+                <div>
+                  <h4 className="font-label-caps text-label-caps text-on-surface mb-6 tracking-widest uppercase text-xs">
+                    Sanctuary Inclusions
+                  </h4>
+                  <ul className="space-y-4">
+                    {[
+                      { icon: 'breakfast_dining', label: 'Gourmet Organic Breakfast', desc: 'Daily hand-delivered or waterside breakfast.' },
+                      { icon: 'sailing', label: 'Bespoke River Excursion', desc: 'Complimentary private sunset delta cruise.' },
+                      { icon: 'local_taxi', label: 'Roundtrip Airport Transfer', desc: 'Luxury private vehicle transport service.' },
+                      { icon: 'local_bar', label: 'Artisanal Mini Bar', desc: 'Fully stocked with local spirits & refreshments.' },
+                      { icon: 'room_service', label: '24/7 Butler Service', desc: 'Dedicated concierge for tailored requests.' },
+                    ].map((item, idx) => (
+                      <li key={idx} className="flex gap-3">
+                        <span className="material-symbols-outlined text-tertiary text-lg mt-0.5">{item.icon}</span>
+                        <div>
+                          <p className="font-body-md text-xs text-on-surface font-semibold">{item.label}</p>
+                          <p className="font-body-md text-[10px] text-on-surface-variant leading-normal">{item.desc}</p>
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="pt-6 border-t border-outline-variant/10">
+                  <h5 className="font-label-caps text-[10px] text-on-surface uppercase mb-3 tracking-wider">
+                    Sanctuary Policies
+                  </h5>
+                  <p className="font-body-md text-[10px] text-on-surface-variant leading-relaxed">
+                    All reservations are subject to our 14-day cancellation policy. Quisodo is an exclusive adult-only sanctuary (ages 18+).
+                  </p>
+                </div>
+              </div>
+
+              <div className="mt-8">
+                <button
+                  onClick={() => {
+                    setIsRatesOpen(false);
+                    navigate('/contact');
+                  }}
+                  className="w-full py-3.5 border border-outline text-on-surface font-label-caps text-[10px] uppercase tracking-[0.2em] hover:bg-secondary hover:text-on-secondary hover:border-secondary transition-colors duration-500 cursor-pointer text-center flex justify-center items-center focus:outline-none"
+                >
+                  Bespoke Inquiries
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      )}
 
     </div>
   );

@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import ScrollReveal from '../components/ScrollReveal';
 
 export default function Reserve() {
   const navigate = useNavigate();
+  const location = useLocation();
 
   // State values matching transactional screen
   const [checkIn, setCheckIn] = useState('2024-10-15');
@@ -11,7 +12,7 @@ export default function Reserve() {
   const [adults, setAdults] = useState(2);
   const [childrenCount, setChildrenCount] = useState(0);
   const [showGuestMenu, setShowGuestMenu] = useState(false);
-  const [selectedRoom, setSelectedRoom] = useState('river-suite'); // 'river-suite' or 'canopy-villa'
+  const [selectedRoom, setSelectedRoom] = useState(location.state?.room || 'river-suite'); // 'river-suite' or 'canopy-villa'
   const [isReserved, setIsReserved] = useState(false);
   const [isReserving, setIsReserving] = useState(false);
 
@@ -146,7 +147,7 @@ export default function Reserve() {
               <section className="bg-surface-container-low/50 backdrop-blur-md p-8 md:p-12 border border-outline-variant/10 rounded-xl flex flex-col gap-10">
                 <div className="flex items-center gap-4 border-b border-outline-variant/20 pb-4">
                   <span className="font-label-caps text-label-caps text-tertiary">01</span>
-                  <h2 className="font-headline-md text-headline-md">Dates &amp; Guests</h2>
+                  <h2 className="font-display-xl text-xl sm:text-2xl text-on-surface tracking-wide">Dates &amp; Guests</h2>
                 </div>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -263,7 +264,7 @@ export default function Reserve() {
               <section className="flex flex-col gap-10">
                 <div className="flex items-center gap-4 border-b border-outline-variant/20 pb-4">
                   <span className="font-label-caps text-label-caps text-tertiary">02</span>
-                  <h2 className="font-headline-md text-headline-md">Accommodations</h2>
+                  <h2 className="font-display-xl text-xl sm:text-2xl text-on-surface tracking-wide">Accommodations</h2>
                 </div>
                 
                 <div className="grid grid-cols-1 gap-8">

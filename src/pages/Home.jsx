@@ -74,8 +74,8 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
             <div className="md:col-span-5 md:col-start-2">
               <ScrollReveal>
-                <h2 className="font-display-xl text-headline-lg-mobile md:text-headline-lg text-on-surface leading-[1.1] mb-8">
-                  A Sanctuary<br />on the Volta
+                <h2 className="font-display-xl text-4xl sm:text-5xl md:text-[56px] lg:text-[64px] text-on-surface leading-[1.05] mb-8 tracking-tight">
+                  A <span className="italic font-light text-tertiary">Sanctuary</span><br />on the Volta
                 </h2>
                 <p className="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-lg">
                   Hidden where the currents slow and the air thickens with the scent of water lilies, Quisodo offers an unparalleled escape. It is a place where the rhythmic pulse of the river dictates the pace of the day, and luxury is found in the profound quiet.
@@ -110,8 +110,8 @@ export default function Home() {
             <div className="flex flex-col md:flex-row justify-between items-end mb-16">
               <ScrollReveal>
                 <p className="font-label-caps text-label-caps text-tertiary mb-4">Stay</p>
-                <h2 className="font-display-xl text-headline-lg-mobile md:text-headline-lg text-on-surface leading-none">
-                  Riverfront Havens
+                <h2 className="font-display-xl text-4xl sm:text-5xl md:text-[56px] lg:text-[64px] text-on-surface leading-[1.05] tracking-tight">
+                  Riverfront <span className="italic font-light text-tertiary">Havens</span>
                 </h2>
               </ScrollReveal>
 
@@ -216,8 +216,8 @@ export default function Home() {
                 <p className="font-label-caps text-label-caps text-tertiary mb-6 tracking-[0.3em]">
                   FISHING EXPERIENCES
                 </p>
-                <h2 className="font-display-xl text-headline-lg-mobile md:text-headline-lg text-on-surface leading-[1.1] mb-8">
-                  The Art of<br />the Cast
+                <h2 className="font-display-xl text-4xl sm:text-5xl md:text-[56px] lg:text-[64px] text-on-surface leading-[1.05] mb-8 tracking-tight">
+                  The Art of<br /><span className="italic font-light text-tertiary">the Cast</span>
                 </h2>
                 <p className="font-body-lg text-body-lg text-on-surface-variant mb-10">
                   Embrace the rhythmic pulse of the Volta. From sunrise expeditions to learning local techniques passed down through generations, our guided fishing journeys are a masterclass in patience and connection.
@@ -242,8 +242,8 @@ export default function Home() {
                   <p className="font-label-caps text-label-caps text-tertiary mb-6 tracking-[0.3em]">
                     BOAT CRUISING
                   </p>
-                  <h2 className="font-display-xl text-headline-lg-mobile md:text-headline-lg text-on-surface leading-[1.1] mb-8">
-                    Freedom on<br />the Water
+                  <h2 className="font-display-xl text-4xl sm:text-5xl md:text-[56px] lg:text-[64px] text-on-surface leading-[1.05] mb-8 tracking-tight">
+                    Freedom on<br /><span className="italic font-light text-tertiary">the Water</span>
                   </h2>
                   <p className="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-md">
                     Navigate the currents in unmatched style. Whether a sunset champagne cruise on a private yacht or a slow exploration of the mangrove channels in a classic mahogany skiff, the river is yours to command.

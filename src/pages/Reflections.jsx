@@ -82,8 +82,8 @@ export default function Reflections() {
                 <span className="material-symbols-outlined text-4xl text-tertiary mb-8 opacity-50">
                   format_quote
                 </span>
-                <h2 className="font-display-xl text-headline-lg-mobile md:text-headline-lg text-on-surface mb-8 leading-tight">
-                  "Time doesn't merely slow down here; it completely unravels."
+                <h2 className="font-display-xl text-4xl sm:text-5xl md:text-[56px] lg:text-[64px] text-on-surface mb-8 leading-[1.05] tracking-tight">
+                  "Time doesn't merely slow down here; it completely <span className="italic font-light text-tertiary">unravels.</span>"
                 </h2>
                 <div className="h-[1px] w-12 bg-tertiary mb-8"></div>
                 <p className="font-body-md text-body-md text-on-surface-variant mb-6">

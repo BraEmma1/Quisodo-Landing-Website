@@ -140,7 +140,7 @@ export default function RoomDetails() {
           {/* Description Block */}
           <div className="md:col-span-5 flex flex-col gap-8">
             <ScrollReveal>
-              <h2 className="font-display-xl text-headline-lg-mobile md:text-headline-md text-on-surface leading-tight mb-6">
+              <h2 className="font-display-xl text-3xl sm:text-4xl md:text-5xl text-on-surface leading-[1.05] tracking-tight mb-6">
                 A private haven where the river meets refined design.
               </h2>
               <p className="font-body-lg text-body-lg text-on-surface-variant max-w-md">

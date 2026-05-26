@@ -164,7 +164,7 @@ export default function Gallery() {
             <span className="font-label-caps text-label-caps text-tertiary mb-3 block uppercase tracking-widest">
               {lightbox.category}
             </span>
-            <h2 className="font-display-xl text-headline-lg-mobile md:text-headline-md text-on-surface">
+            <h2 className="font-display-xl text-3xl sm:text-4xl md:text-5xl text-on-surface leading-[1.05] tracking-tight">
               {lightbox.title}
             </h2>
           </div>
