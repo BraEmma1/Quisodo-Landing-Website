@@ -229,4 +229,15 @@
       transparent 100%
     );
   }
+
+  /* Premium payment logo filtering */
+  .payment-logo {
+    filter: grayscale(1) brightness(1.5) contrast(1.2);
+    opacity: 0.7;
+    transition: all 0.5s var(--ease-luxury);
+  }
+  .payment-logo:hover {
+    filter: grayscale(0) brightness(1);
+    opacity: 1;
+  }
 }
