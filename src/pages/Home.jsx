@@ -1,6 +1,9 @@
 import { useNavigate } from 'react-router-dom';
 import ScrollReveal from '../components/ScrollReveal';
-import familyOnBoat from '../assets/Optimized images/family-on-boat.jpg';
+import room1 from '../assets/Optimized images/room1.webp';
+import room2 from '../assets/Optimized images/room2.webp';
+import fishingBoat from '../assets/Optimized images/fishing.webp';
+
 
 export default function Home() {
   const navigate = useNavigate();
@@ -129,7 +132,7 @@ export default function Home() {
                   <img
                     alt="The Volta Suite"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuPAPV_S6xSGj8B9y1_pi_ezDw9HWnOzCkpTrPJe5uB320H1Pj_-1Epr3Zwr81_wE16cXvf-zUy3yfLoMolBiyilFq39NcxN1KldqFbfVyOhnVoJa2Akhis5VXv39eQoPLa6n2RCu8Axqne664iKxVnSm0r6lqJVKaHZFtHkDXorH3B-sSgsLVWbx6eZP5swbnRWb19nHu32sd9Jk1Vqawe8WBBxhJPpVunnPpdyx2BPwDzH2P0FF7hmxw0gixX68PULtsfmwx50Qi"
+                    src={room1}
                   />
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500" />
                 </div>
@@ -159,7 +162,7 @@ export default function Home() {
                   <img
                     alt="Canopy Villa"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQD8grn3A0dZupUzq2eQ3GflvdOUQXSTBnnI93JSeARyFy_XQ15VNqP460pki6jOShc59xlt0tuouk51_2T_CN70Hyo1Y_RN9zL-NkTtBycAmhNbOZE1SHC_E2CNR9sNHERDCdzsoC7doiAJsJP3AJWcu2MP3JLtBfHb-ZZmtM3I0w2Oc2GwqjI4_-jMfF9aK8l0isuZrva3bgplsF3ZBWZHG0KHmiiKuIDFCxy77cKCNnXWhWvY7vVA1JKui9Hk96flLdj-BUNfHh"
+                    src={room2}
                   />
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500" />
                 </div>
@@ -198,9 +201,9 @@ export default function Home() {
               <ScrollReveal>
                 <div className="aspect-[4/5] md:aspect-video overflow-hidden rounded-sm group relative">
                   <img
-                    alt="Silhouette of a fisherman at dawn on the Volta River"
+                    alt="Silhouette of a man with a fishing hook at dawn on the Volta River"
                     className="w-full h-full object-cover grayscale-[10%] contrast-110 group-hover:scale-102 transition-transform duration-1000 ease-out"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9pT0Gv7I-8q5g4zF-R9-0tS-t9S0gS-G-t9S0gS-G-t9S0gS-G-t9S0gS-G-t9S0gS-G-t9S0gS-G-t9S0gS-G-t9S0gS-G-t9S0gS-G"
+                    src={fishingBoat}
                   />
                   <div className="absolute inset-0 bg-surface/10" />
                 </div>
@@ -258,16 +261,14 @@ export default function Home() {
 
               <div className="h-[400px] md:h-auto min-h-[400px] relative overflow-hidden group">
                 <ScrollReveal className="w-full h-full">
-                  <video
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className="absolute inset-0 w-full h-full object-cover z-0 filter brightness-90 group-hover:scale-102 transition-transform duration-1000"
-                  >
-                    <source src="https://storage.googleapis.com/aida-featured-images/river-luxury-boat.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
+                  <iframe
+                    className="absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-full min-w-[177.77vh] -translate-x-1/2 -translate-y-1/2 z-0 pointer-events-none filter brightness-90 group-hover:scale-102 transition-transform duration-1000"
+                    src="https://www.youtube.com/embed/WMO-Lt4VMdw?autoplay=1&mute=1&loop=1&playlist=WMO-Lt4VMdw&controls=0&showinfo=0&rel=0&playsinline=1&enablejsapi=1&vq=hd1080"
+                    title="Boat Cruising on the Volta River"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
                   <div className="absolute inset-0 bg-overlay-bg z-10 transition-colors duration-500 group-hover:bg-overlay-bg-hover" />
                 </ScrollReveal>
               </div>
