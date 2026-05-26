@@ -31,13 +31,14 @@ export default function Home() {
           }}
         />
 
-        <div className="relative z-20 text-center px-margin-mobile flex flex-col items-center mt-20 max-w-5xl">
+        <div className="relative z-20 text-center px-margin-mobile flex flex-col items-center max-w-5xl translate-y-12 md:translate-y-16">
           <ScrollReveal delay={100} className="flex flex-col items-center">
-            <p className="font-label-caps text-label-caps text-tertiary mb-6 tracking-[0.3em]">
+            <p className="font-label-caps text-[12px] md:text-[14px] text-tertiary mb-6 tracking-[0.45em] uppercase">
               Welcome to Quisodo
             </p>
-            <h1 className="font-display-xl text-display-xl-mobile md:text-display-xl text-white leading-none text-shadow-elegant max-w-4xl">
-              Where River Life Becomes Luxury
+            <h1 className="font-display-xl text-3xl sm:text-5xl md:text-[60px] lg:text-[74px] xl:text-[82px] text-white leading-[1.08] text-shadow-elegant max-w-5xl tracking-wide">
+              Where River Life<br />
+              <span className="italic font-light text-tertiary">Becomes Luxury</span>
             </h1>
           </ScrollReveal>
         </div>
