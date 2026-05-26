@@ -99,89 +99,17 @@ export default function Navbar() {
             : 'bg-transparent py-8'
         }`}
       >
-        <div className="flex justify-between items-center max-w-[1440px] mx-auto w-full">
-          {/* Brand Wordmark */}
-          <Link
-            to="/"
-            onClick={() => setIsOpen(false)}
-            className={`font-display-xl text-headline-md tracking-[0.25em] transition-all duration-500 scale-95 hover:scale-100 ease-in-out select-none ${
-              isOpen ? 'opacity-0 pointer-events-none' : 'opacity-100'
-            } ${
-              isTransparentDark && !isOpen
-                ? 'text-white hover:text-tertiary' 
-                : 'text-on-surface hover:text-primary'
-            }`}
-          >
-            QUISODO
-          </Link>
-
-          {/* Desktop Navigation Links */}
-          <div className="hidden lg:flex gap-6 xl:gap-gutter items-center">
-            {navItems.map((item) => (
-              <NavLink
-                key={item.label}
-                to={item.path}
-                className={({ isActive }) => {
-                  let linkColor = '';
-                  if (isActive) {
-                    linkColor = isTransparentDark 
-                      ? 'text-white after:scale-x-100' 
-                      : 'text-primary after:scale-x-100';
-                  } else {
-                    linkColor = isTransparentDark 
-                      ? 'text-white/70 hover:text-white' 
-                      : 'text-on-surface-variant hover:text-on-surface';
-                  }
-                  return `font-label-caps text-label-caps transition-all duration-500 relative py-2 ${linkColor} after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-tertiary after:scale-x-0 after:origin-center hover:after:scale-x-100 after:transition-transform after:duration-500`;
-                }}
-              >
-                {item.label}
-              </NavLink>
-            ))}
-          </div>
-
-          {/* Reserve Button & Hamburger */}
-          <div className="flex items-center gap-4">
-            {/* Theme Toggle Button */}
-            <button
-              onClick={toggleTheme}
-              className={`p-2 transition-all duration-500 focus:outline-none cursor-pointer flex items-center justify-center mr-1 ${
-                isOpen ? 'opacity-0 pointer-events-none' : 'opacity-100'
-              } ${
-                isTransparentDark 
-                  ? 'text-white/90 hover:text-white' 
-                  : 'text-on-surface hover:text-primary'
-              }`}
-              aria-label="Toggle Theme"
-            >
-              <span className="material-symbols-outlined text-[22px]">
-                {theme === 'dark' ? 'light_mode' : 'dark_mode'}
-              </span>
-            </button>
-
-            <button
-              onClick={() => {
-                setIsOpen(false);
-                navigate('/reserve');
-              }}
-              className={`hidden lg:inline-block font-label-caps text-label-caps border transition-all duration-500 ease-in-out active:scale-95 px-6 py-3 ${
-                isTransparentDark 
-                  ? 'text-white border-white/30 hover:bg-white hover:text-black hover:border-white' 
-                  : 'text-on-surface border-outline hover:bg-secondary hover:text-on-secondary hover:border-secondary'
-              }`}
-            >
-              Reserve
-            </button>
-
-            {/* Hamburger Trigger */}
+        <div className="grid grid-cols-3 items-center max-w-[1440px] mx-auto w-full">
+          {/* Hamburger (Order 3 on mobile (Right), Order 1 on desktop (Left)) */}
+          <div className="flex order-3 lg:order-1 justify-end lg:justify-start">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className={`flex flex-col gap-1.5 lg:hidden justify-center items-center w-8 h-8 relative z-50 cursor-pointer focus:outline-none ${
+              className={`flex flex-col gap-1.5 justify-center items-center w-8 h-8 relative z-50 cursor-pointer focus:outline-none ${
                 isOpen 
                   ? 'text-on-surface' 
                   : (isTransparentDark ? 'text-white hover:text-tertiary' : 'text-on-surface hover:text-primary')
               }`}
-              aria-label="Toggle Mobile Menu"
+              aria-label="Toggle Menu"
             >
               <span
                 className={`w-6 h-[1.5px] bg-current transition-all duration-300 ${
@@ -200,23 +128,76 @@ export default function Navbar() {
               />
             </button>
           </div>
+
+          {/* Center: Brand Wordmark (Absolutely Centered, Hides when open) */}
+          <div className="flex order-2 justify-center">
+            <Link
+              to="/"
+              onClick={() => setIsOpen(false)}
+              className={`font-display-xl text-headline-md tracking-[0.25em] transition-all duration-500 scale-95 hover:scale-100 ease-in-out select-none relative z-50 ${
+                isOpen ? 'opacity-0 pointer-events-none' : 'opacity-100'
+              } ${
+                isTransparentDark && !isOpen
+                  ? 'text-white hover:text-tertiary' 
+                  : 'text-on-surface hover:text-primary'
+              }`}
+            >
+              QUISODO
+            </Link>
+          </div>
+
+          {/* Theme Toggle & Reserve (Order 1 on mobile (Left), Order 3 on desktop (Right)) */}
+          <div className="flex order-1 lg:order-3 justify-start lg:justify-end items-center gap-4">
+            {/* Theme Toggle Button */}
+            <button
+              onClick={toggleTheme}
+              className={`p-2 transition-all duration-500 focus:outline-none cursor-pointer flex items-center justify-center relative z-50 ${
+                isOpen ? 'opacity-0 pointer-events-none' : 'opacity-100'
+              } ${
+                isTransparentDark && !isOpen
+                  ? 'text-white/90 hover:text-white' 
+                  : 'text-on-surface hover:text-primary'
+              }`}
+              aria-label="Toggle Theme"
+            >
+              <span className="material-symbols-outlined text-[22px]">
+                {theme === 'dark' ? 'light_mode' : 'dark_mode'}
+              </span>
+            </button>
+
+            <button
+              onClick={() => {
+                setIsOpen(false);
+                navigate('/reserve');
+              }}
+              className={`hidden lg:inline-block font-label-caps text-label-caps border transition-all duration-500 ease-in-out active:scale-95 px-6 py-3 relative z-50 ${
+                isOpen ? 'opacity-0 pointer-events-none' : 'opacity-100'
+              } ${
+                isTransparentDark 
+                  ? 'text-white border-white/30 hover:bg-white hover:text-black hover:border-white' 
+                  : 'text-on-surface border-outline hover:bg-secondary hover:text-on-secondary hover:border-secondary'
+              }`}
+            >
+              Reserve
+            </button>
+          </div>
         </div>
       </nav>
 
-      {/* Slide-out Mobile Menu Drawer */}
+      {/* Slide-out Menu Drawer (Now open on all viewports, including desktop) */}
       <div
-        className={`fixed inset-0 z-40 bg-surface/95 backdrop-blur-2xl lg:hidden transition-all duration-500 overflow-y-auto ${
+        className={`fixed inset-0 z-40 bg-surface/95 backdrop-blur-2xl transition-all duration-500 overflow-y-auto ${
           isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
       >
-        <div className="flex flex-col justify-start items-center min-h-full w-full gap-6 px-margin-mobile pt-32 pb-16">
+        <div className="flex flex-col justify-center items-center min-h-full w-full gap-4 md:gap-6 px-margin-mobile pt-32 pb-16">
           {navItems.map((item, idx) => (
             <Link
               key={item.label}
               to={item.path}
               onClick={() => setIsOpen(false)}
-              style={{ transitionDelay: isOpen ? `${idx * 75}ms` : '0ms' }}
-              className={`font-display-xl text-xl min-[360px]:text-2xl sm:text-3xl tracking-wider sm:tracking-widest text-on-surface hover:text-primary transition-all duration-500 transform ${
+              style={{ transitionDelay: isOpen ? `${idx * 60}ms` : '0ms' }}
+              className={`font-display-xl text-2xl min-[360px]:text-3xl sm:text-4xl md:text-5xl lg:text-[54px] tracking-widest text-on-surface hover:text-primary transition-all duration-500 transform ${
                 isOpen ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
               }`}
             >
@@ -230,8 +211,8 @@ export default function Navbar() {
               setIsOpen(false);
               navigate('/reserve');
             }}
-            style={{ transitionDelay: isOpen ? `${navItems.length * 75}ms` : '0ms' }}
-            className={`w-full max-w-xs mt-6 border border-tertiary bg-tertiary text-on-tertiary py-4 font-label-caps text-label-caps tracking-[0.2em] uppercase hover:bg-tertiary/80 transition-all duration-500 transform cursor-pointer active:scale-95 flex items-center justify-center gap-2 ${
+            style={{ transitionDelay: isOpen ? `${navItems.length * 60}ms` : '0ms' }}
+            className={`w-full max-w-xs mt-8 border border-tertiary bg-tertiary text-on-tertiary py-3.5 font-label-caps text-label-caps tracking-[0.2em] uppercase hover:bg-tertiary/80 transition-all duration-500 transform cursor-pointer active:scale-95 flex items-center justify-center gap-2 ${
               isOpen ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
             }`}
           >

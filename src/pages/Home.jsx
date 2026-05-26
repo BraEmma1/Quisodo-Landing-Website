@@ -1,6 +1,6 @@
-
 import { useNavigate } from 'react-router-dom';
 import ScrollReveal from '../components/ScrollReveal';
+import familyOnBoat from '../assets/Optimized images/family-on-boat.jpg';
 
 export default function Home() {
   const navigate = useNavigate();
@@ -9,11 +9,20 @@ export default function Home() {
     <div className="relative w-full">
       {/* Hero Section */}
       <header
-        className="relative w-full h-[90vh] md:h-screen flex items-center justify-center overflow-hidden parallax-bg -mt-24"
-        style={{
-          backgroundImage: `url('https://lh3.googleusercontent.com/aida-public/AB6AXuCJGoitsLpBQNKu5j49SVetynHXIATHuHTLFA-JItm-B2ELh35JJVTTmy_x0SJdtQ0_wg1mVl3iXjrq85ij4XiCOO1fDIgwNplMyf2wyI6STZMtYuXpl2FhR40q9KYOwF75DyP-OBEIhWjodBXlCfc5gfMlSCRTTkMxETratLKR8EXmc8CPsim4-5rv5kvxAgG_Gt6P4EEjn0R5efkl6CWPzk-cVbYfhFfaU63hyz24GLJkvMLL365fi3Qu-f2BhcXPG9LdtM9TAwBA')`,
-        }}
+        className="relative w-full h-screen flex items-center justify-center overflow-hidden -mt-24"
       >
+        {/* Background YouTube Video */}
+        <div className="absolute inset-0 w-full h-full z-0 overflow-hidden pointer-events-none filter brightness-[0.55] select-none">
+          <iframe
+            className="absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-[100vh] min-w-[177.77vh] -translate-x-1/2 -translate-y-1/2"
+            src="https://www.youtube.com/embed/WMO-Lt4VMdw?autoplay=1&mute=1&loop=1&playlist=WMO-Lt4VMdw&controls=0&showinfo=0&rel=0&playsinline=1&enablejsapi=1&vq=hd1080"
+            title="Quisodo Riverside Sanctuary Background Video"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        </div>
+
         {/* Cinematic dark overlays — always dark regardless of theme for photo contrast */}
         <div
           className="absolute inset-0 z-10"
@@ -21,9 +30,6 @@ export default function Home() {
             background: 'linear-gradient(to top, rgba(14,13,9,0.80) 0%, rgba(14,13,9,0.25) 50%, rgba(14,13,9,0.10) 100%)'
           }}
         />
-        
-        {/* Floating Accent Ring */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[85vw] h-[85vw] md:w-[65vh] md:h-[65vh] border border-outline/10 rounded-full pointer-events-none z-0" />
 
         <div className="relative z-20 text-center px-margin-mobile flex flex-col items-center mt-20 max-w-5xl">
           <ScrollReveal delay={100} className="flex flex-col items-center">
@@ -33,26 +39,26 @@ export default function Home() {
             <h1 className="font-display-xl text-display-xl-mobile md:text-display-xl text-white leading-none text-shadow-elegant max-w-4xl">
               Where River Life Becomes Luxury
             </h1>
-            
-            <button
-              onClick={() => {
-                const element = document.getElementById('sanctuary-story');
-                if (element) {
-                  element.scrollIntoView({ behavior: 'smooth' });
-                }
-              }}
-              className="mt-12 font-label-caps text-label-caps text-white/90 border-b border-tertiary pb-2 hover:text-tertiary transition-colors duration-300 flex items-center gap-2 group cursor-pointer focus:outline-none"
-            >
-              Discover the Sanctuary
-              <span
-                className="material-symbols-outlined text-[16px] group-hover:translate-y-1 transition-transform duration-300"
-                data-icon="arrow_downward"
-              >
-                arrow_downward
-              </span>
-            </button>
           </ScrollReveal>
         </div>
+
+        {/* Scroll Down Indicator */}
+        <ScrollReveal delay={300} className="absolute bottom-12 left-1/2 -translate-x-1/2 z-20">
+          <button
+            onClick={() => {
+              const element = document.getElementById('sanctuary-story');
+              if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+            className="flex items-center justify-center w-12 h-12 rounded-full border border-white/20 hover:border-tertiary text-white hover:text-tertiary hover:bg-tertiary/10 transition-all duration-500 cursor-pointer focus:outline-none active:scale-90 animate-bounce"
+            aria-label="Scroll to story"
+          >
+            <span className="material-symbols-outlined text-[20px]">
+              arrow_downward
+            </span>
+          </button>
+        </ScrollReveal>
       </header>
 
       {/* Main Content Area */}
@@ -76,7 +82,7 @@ export default function Home() {
                 </button>
               </ScrollReveal>
             </div>
-            
+
             <div className="md:col-span-5 md:col-start-8 mt-12 md:mt-0 relative">
               <ScrollReveal delay={200}>
                 <div className="aspect-[3/4] overflow-hidden rounded-sm relative group">
@@ -102,7 +108,7 @@ export default function Home() {
                   Riverfront Havens
                 </h2>
               </ScrollReveal>
-              
+
               <ScrollReveal delay={150}>
                 <button
                   onClick={() => navigate('/stay')}
@@ -170,7 +176,7 @@ export default function Home() {
                 </div>
               </ScrollReveal>
             </div>
-            
+
             <div className="text-center mt-16 md:hidden">
               <button
                 onClick={() => navigate('/stay')}
@@ -198,7 +204,7 @@ export default function Home() {
               </ScrollReveal>
               <div className="absolute -bottom-8 -right-8 w-48 h-48 border border-outline/10 -z-10 hidden md:block" />
             </div>
-            
+
             <div className="md:col-span-4 md:col-start-9 order-1 md:order-2 mb-12 md:mb-0">
               <ScrollReveal delay={150}>
                 <p className="font-label-caps text-label-caps text-tertiary mb-6 tracking-[0.3em]">
@@ -246,7 +252,7 @@ export default function Home() {
                   </div>
                 </ScrollReveal>
               </div>
-              
+
               <div className="h-[400px] md:h-auto min-h-[400px] relative overflow-hidden group">
                 <ScrollReveal className="w-full h-full">
                   <video
