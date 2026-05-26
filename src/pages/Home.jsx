@@ -9,7 +9,7 @@ export default function Home() {
     <div className="relative w-full">
       {/* Hero Section */}
       <header
-        className="relative w-full h-[90vh] lg:h-screen flex items-center justify-center overflow-hidden -mt-24"
+        className="relative w-full h-[92vh] md:h-screen flex items-center justify-center overflow-hidden -mt-24"
       >
         {/* Background YouTube Video */}
         <div className="absolute inset-0 w-full h-full z-0 overflow-hidden pointer-events-none filter brightness-[0.55] select-none">
