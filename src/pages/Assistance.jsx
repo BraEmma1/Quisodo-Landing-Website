@@ -44,7 +44,7 @@ export default function Assistance() {
         },
         {
           question: 'Are children and pets permitted?',
-          answer: 'To maintain an atmosphere of profound tranquility and quiet luxury, Quisodo Riverside Sanctuary is an adult-only retreat (guests must be 18 or older). Furthermore, to protect the delicate local ecosystem and ensure the comfort of all guests, pets are respectfully declined.'
+          answer: 'To maintain an atmosphere of profound tranquility and quiet luxury, Quisodo Landing is an adult-only retreat (guests must be 18 or older). Furthermore, to protect the delicate local ecosystem and ensure the comfort of all guests, pets are respectfully declined.'
         }
       ]
     }

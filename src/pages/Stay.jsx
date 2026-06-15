@@ -44,8 +44,7 @@ function RoomImageSlider({ images, alt }) {
         </div>
       ))}
 
-      {/* Decorative frame overlay */}
-      <div className="absolute inset-0 border border-outline/10 m-4 pointer-events-none z-20" />
+
 
       {/* Subtle overlay gradients for movie-like contrast */}
       <div className="absolute inset-0 bg-black/20 z-20 group-hover/slider:bg-black/10 transition-all duration-700" />
@@ -171,8 +170,8 @@ export default function Stay() {
       </section>
 
       {/* Staggered Interlocking Editorial Layout */}
-      <section className="max-w-container-max mx-auto px-margin-mobile md:px-12 lg:px-margin-desktop relative">
-        <div className="grid grid-cols-1 md:grid-cols-2 border border-outline-variant/10 bg-surface-container-lowest">
+      <section className="w-full relative">
+        <div className="grid grid-cols-1 md:grid-cols-2 bg-surface-container-lowest">
 
           {/* ROOM 1: VOLTA SUITE */}
           {filteredAccommodations.some(r => r.id === 'volta-suite') && (
@@ -288,7 +287,7 @@ export default function Stay() {
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-6 bg-black/85 backdrop-blur-md animate-fadeIn">
           {/* Main Modal Container */}
           <div className="relative w-full max-w-4xl bg-surface-container-lowest border border-outline-variant/10 rounded-xl overflow-hidden shadow-2xl flex flex-col md:flex-row max-h-[90vh] md:max-h-[85vh] animate-scaleIn">
-            
+
             {/* Close Button */}
             <button
               onClick={() => setIsRatesOpen(false)}
@@ -316,21 +315,19 @@ export default function Stay() {
               <div className="flex bg-surface-container-high/40 p-1 rounded-lg border border-outline-variant/10 max-w-md">
                 <button
                   onClick={() => setSelectedSeason('green')}
-                  className={`flex-1 py-3 px-4 rounded-md font-label-caps text-[11px] tracking-wider transition-all duration-300 focus:outline-none cursor-pointer uppercase ${
-                    selectedSeason === 'green'
+                  className={`flex-1 py-3 px-4 rounded-md font-label-caps text-[11px] tracking-wider transition-all duration-300 focus:outline-none cursor-pointer uppercase ${selectedSeason === 'green'
                       ? 'bg-surface text-primary shadow-sm font-semibold'
                       : 'text-on-surface-variant hover:text-on-surface'
-                  }`}
+                    }`}
                 >
                   Green Season <span className="block text-[9px] font-normal lowercase opacity-75">(May – Oct)</span>
                 </button>
                 <button
                   onClick={() => setSelectedSeason('high')}
-                  className={`flex-1 py-3 px-4 rounded-md font-label-caps text-[11px] tracking-wider transition-all duration-300 focus:outline-none cursor-pointer uppercase ${
-                    selectedSeason === 'high'
+                  className={`flex-1 py-3 px-4 rounded-md font-label-caps text-[11px] tracking-wider transition-all duration-300 focus:outline-none cursor-pointer uppercase ${selectedSeason === 'high'
                       ? 'bg-surface text-primary shadow-sm font-semibold'
                       : 'text-on-surface-variant hover:text-on-surface'
-                  }`}
+                    }`}
                 >
                   High Season <span className="block text-[9px] font-normal lowercase opacity-75">(Nov – Apr)</span>
                 </button>
@@ -341,17 +338,17 @@ export default function Stay() {
                 {accommodations.map((room) => {
                   const currentPrice = selectedSeason === 'green' ? room.price : room.highPrice;
                   const reserveRoomId = room.id === 'volta-suite' ? 'river-suite' : 'canopy-villa';
-                  
+
                   return (
-                    <div 
+                    <div
                       key={room.id}
                       className="group flex flex-col sm:flex-row gap-6 p-5 rounded-lg border border-outline-variant/15 hover:border-outline/40 bg-surface-container-low/30 hover:bg-surface-container-low/50 transition-all duration-300"
                     >
                       {/* Image Thumbnail */}
                       <div className="w-full sm:w-1/3 aspect-[4/3] rounded-md overflow-hidden bg-surface-container relative">
-                        <img 
-                          className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" 
-                          src={room.images[0]} 
+                        <img
+                          className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                          src={room.images[0]}
                           alt={room.title}
                         />
                       </div>
@@ -429,7 +426,7 @@ export default function Stay() {
                     Sanctuary Policies
                   </h5>
                   <p className="font-body-md text-[10px] text-on-surface-variant leading-relaxed">
-                    All reservations are subject to our 14-day cancellation policy. Quisodo is an exclusive adult-only sanctuary (ages 18+).
+                    All reservations are subject to our 14-day cancellation policy. Quisodo Landing is an exclusive adult-only sanctuary (ages 18+).
                   </p>
                 </div>
               </div>

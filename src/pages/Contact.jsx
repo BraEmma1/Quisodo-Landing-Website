@@ -114,7 +114,7 @@ export default function Contact() {
                 <span className="material-symbols-outlined text-6xl text-tertiary mb-6">sailing</span>
                 <h2 className="font-display-xl text-2xl sm:text-3xl text-on-surface mb-4 tracking-tight">Inquiry Received</h2>
                 <p className="font-body-lg text-body-lg text-on-surface-variant max-w-md mb-8">
-                  Thank you for reaching out to Quisodo. Our dedicated privacy and bookings concierge will contact you within 24 hours.
+                  Thank you for reaching out to Quisodo Landing. Our dedicated privacy and bookings concierge will contact you within 24 hours.
                 </p>
                 <button
                   onClick={() => setIsSubmitted(false)}
@@ -282,13 +282,13 @@ export default function Contact() {
                 Direct Contact
               </h3>
               <div className="space-y-6">
-                <a className="flex items-start gap-4 group" href="mailto:reservations@quisodo.com">
+                <a className="flex items-start gap-4 group" href="mailto:reservations@quisodolanding.com">
                   <span className="material-symbols-outlined text-on-surface-variant group-hover:text-tertiary transition-colors mt-1">
                     mail
                   </span>
                   <div>
                     <p className="font-body-md text-on-surface group-hover:text-tertiary transition-colors">
-                      reservations@quisodo.com
+                      reservations@quisodolanding.com
                     </p>
                     <p className="font-body-md text-sm text-on-surface-variant opacity-70">
                       General &amp; Booking Inquiries
@@ -333,7 +333,7 @@ export default function Contact() {
                 The Sanctuary
               </h3>
               <p className="font-body-md text-on-surface mb-6 leading-relaxed">
-                Quisodo Riverside Sanctuary<br />
+                Quisodo Landing<br />
                 Ada Foah, Volta Region<br />
                 Ghana
               </p>

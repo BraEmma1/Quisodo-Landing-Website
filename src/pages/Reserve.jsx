@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import ScrollReveal from '../components/ScrollReveal';
+import quisodoLogo from '../assets/Optimized images/quisodo logo.png';
+import room1 from '../assets/Optimized images/room1.webp';
+import room2 from '../assets/Optimized images/room2.webp';
 
 export default function Reserve() {
   const navigate = useNavigate();
@@ -23,7 +26,7 @@ export default function Reserve() {
       price: 850,
       size: '85 SQM',
       bed: 'KING BED',
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuC12tk30eZQ1XiU0-40tisLlR36K-UYvVSbWi6SwxBDeeghKqUH_hUD2RNHlvUX8ltuQek6W-IrEGLI1FdOEsgvb31blncMmWzxZHmW8Jh5srBxHfGHSJkuXPfm0d2FcKH2QfJEb8gtjM4OWlV0GLR_J3wDiGkIkKb7zjGZKl5bM6p8CN_TCQW667z4uwVPDoHT0enslY3ADmmQpcdw7O06daqnEhivnOBaKSnZlgbN-r3XCRCoVFyAgfiq8E2DY3tZPlzfLj5t-kJ2',
+      image: room1,
       description: 'Expansive views of the Volta, private plunge pool, and bespoke furnishings in deep navy and natural stone.'
     },
     'canopy-villa': {
@@ -31,7 +34,7 @@ export default function Reserve() {
       price: 1200,
       size: '120 SQM',
       bed: 'KING BED',
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAEZ0KAWqxAmnb0GVb7cAexyJbCD0vIc7mkO4rOOc3343iCOxeOTbOlgrcjBUC-kdkd4KKnCHIN3KZ-qhXPwYgN_bT5rhTLFmxD7dpS8GGWXXSe9GcsLG8c4LXYdcqFSQ-9gASOVy3YxhGhrw4MIvQ8h0rXgVsi40sqXGzRg88_qTlOoj3ixMCUJM80R-W4l99r1uzbdOEQDlM6iet5aDoW3VOutd8dy3kLPlkGVl2Y2nzRRUKsdnKaqQIbQB6iz9m_UY-VkSu9PeSn',
+      image: room2,
       description: 'Elevated among the ancient trees, offering complete privacy and an immersive connection with nature.'
     }
   };
@@ -79,14 +82,18 @@ export default function Reserve() {
     <div className="min-h-screen bg-background text-on-surface font-body-md text-body-md antialiased pb-section-gap">
       {/* Minimal Header for Transactional Flow */}
       <header className="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-8 max-w-container-max mx-auto bg-surface/90 backdrop-blur-2xl border-b border-outline-variant/10">
-        <span 
-          onClick={() => navigate('/')} 
-          className="font-headline-md text-headline-md tracking-[0.2em] text-on-surface hover:text-primary transition-colors cursor-pointer select-none"
+        <span
+          onClick={() => navigate('/')}
+          className="cursor-pointer select-none transition-opacity duration-500 hover:opacity-70"
         >
-          QUISODO
+          <img
+            src={quisodoLogo}
+            alt="Quisodo Landing"
+            className="h-9 w-auto object-contain brightness-0 invert"
+          />
         </span>
-        <button 
-          onClick={() => navigate(-1)} 
+        <button
+          onClick={() => navigate(-1)}
           className="text-on-surface-variant font-label-caps text-label-caps hover:text-primary transition-colors uppercase cursor-pointer"
         >
           Cancel
@@ -149,29 +156,29 @@ export default function Reserve() {
                   <span className="font-label-caps text-label-caps text-tertiary">01</span>
                   <h2 className="font-display-xl text-xl sm:text-2xl text-on-surface tracking-wide">Dates &amp; Guests</h2>
                 </div>
-                
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                   {/* Check-in */}
                   <div className="flex flex-col gap-2">
                     <label className="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest text-[10px]">
                       Check-in
                     </label>
-                    <input 
-                      className="bg-transparent border-0 border-b border-inverse-surface/30 px-0 py-4 text-body-lg font-body-lg text-on-surface focus:ring-0 focus:border-tertiary focus:outline-none transition-colors" 
-                      type="date" 
+                    <input
+                      className="bg-transparent border-0 border-b border-inverse-surface/30 px-0 py-4 text-body-lg font-body-lg text-on-surface focus:ring-0 focus:border-tertiary focus:outline-none transition-colors"
+                      type="date"
                       value={checkIn}
                       onChange={(e) => setCheckIn(e.target.value)}
                     />
                   </div>
-                  
+
                   {/* Check-out */}
                   <div className="flex flex-col gap-2">
                     <label className="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest text-[10px]">
                       Check-out
                     </label>
-                    <input 
-                      className="bg-transparent border-0 border-b border-inverse-surface/30 px-0 py-4 text-body-lg font-body-lg text-on-surface focus:ring-0 focus:border-tertiary focus:outline-none transition-colors" 
-                      type="date" 
+                    <input
+                      className="bg-transparent border-0 border-b border-inverse-surface/30 px-0 py-4 text-body-lg font-body-lg text-on-surface focus:ring-0 focus:border-tertiary focus:outline-none transition-colors"
+                      type="date"
                       value={checkOut}
                       onChange={(e) => setCheckOut(e.target.value)}
                     />
@@ -182,8 +189,8 @@ export default function Reserve() {
                     <label className="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest text-[10px]">
                       Guests
                     </label>
-                    <div 
-                      onClick={() => setShowGuestMenu(!showGuestMenu)} 
+                    <div
+                      onClick={() => setShowGuestMenu(!showGuestMenu)}
                       className="flex items-center justify-between border-b border-inverse-surface/30 py-4 cursor-pointer hover:border-tertiary transition-colors"
                     >
                       <span className="font-body-lg text-body-lg text-on-surface">
@@ -204,7 +211,7 @@ export default function Reserve() {
                             <p className="font-body-md text-xs text-on-surface-variant">Ages 18 or older</p>
                           </div>
                           <div className="flex items-center gap-4">
-                            <button 
+                            <button
                               type="button"
                               onClick={() => setAdults(Math.max(1, adults - 1))}
                               className="w-8 h-8 rounded-full border border-outline flex items-center justify-center hover:bg-surface-container-high transition-colors"
@@ -212,7 +219,7 @@ export default function Reserve() {
                               -
                             </button>
                             <span className="font-body-lg text-lg w-4 text-center">{adults}</span>
-                            <button 
+                            <button
                               type="button"
                               onClick={() => setAdults(Math.min(4, adults + 1))}
                               className="w-8 h-8 rounded-full border border-outline flex items-center justify-center hover:bg-surface-container-high transition-colors"
@@ -229,7 +236,7 @@ export default function Reserve() {
                             <p className="font-body-md text-xs text-on-surface-variant">Ages 0 to 17</p>
                           </div>
                           <div className="flex items-center gap-4">
-                            <button 
+                            <button
                               type="button"
                               onClick={() => setChildrenCount(Math.max(0, childrenCount - 1))}
                               className="w-8 h-8 rounded-full border border-outline flex items-center justify-center hover:bg-surface-container-high transition-colors"
@@ -237,7 +244,7 @@ export default function Reserve() {
                               -
                             </button>
                             <span className="font-body-lg text-lg w-4 text-center">{childrenCount}</span>
-                            <button 
+                            <button
                               type="button"
                               onClick={() => setChildrenCount(Math.min(3, childrenCount + 1))}
                               className="w-8 h-8 rounded-full border border-outline flex items-center justify-center hover:bg-surface-container-high transition-colors"
@@ -266,24 +273,23 @@ export default function Reserve() {
                   <span className="font-label-caps text-label-caps text-tertiary">02</span>
                   <h2 className="font-display-xl text-xl sm:text-2xl text-on-surface tracking-wide">Accommodations</h2>
                 </div>
-                
+
                 <div className="grid grid-cols-1 gap-8">
                   {/* Room Card 1 */}
-                  <div 
-                    onClick={() => setSelectedRoom('river-suite')} 
-                    className={`group relative flex flex-col md:flex-row gap-6 bg-surface-container-low/50 backdrop-blur-md p-4 rounded-xl transition-all duration-500 border cursor-pointer ${
-                      selectedRoom === 'river-suite' ? 'border-tertiary shadow-lg' : 'border-outline-variant/15 hover:border-outline/40'
-                    }`}
+                  <div
+                    onClick={() => setSelectedRoom('river-suite')}
+                    className={`group relative flex flex-col md:flex-row gap-6 bg-surface-container-low/50 backdrop-blur-md p-4 rounded-xl transition-all duration-500 border cursor-pointer ${selectedRoom === 'river-suite' ? 'border-tertiary shadow-lg' : 'border-outline-variant/15 hover:border-outline/40'
+                      }`}
                   >
                     <div className="w-full md:w-1/3 aspect-[4/3] md:aspect-square overflow-hidden rounded-lg relative">
                       <div className={`absolute inset-0 transition-colors duration-500 z-10 ${selectedRoom === 'river-suite' ? 'bg-transparent' : 'bg-black/20 group-hover:bg-transparent'}`}></div>
-                      <img 
-                        className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" 
-                        alt="The River Suite bedroom view" 
+                      <img
+                        className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                        alt="The River Suite bedroom view"
                         src={rooms['river-suite'].image}
                       />
                     </div>
-                    
+
                     <div className="flex-1 py-2 pr-4 flex flex-col justify-between">
                       <div>
                         <h3 className="font-headline-lg-mobile text-2xl md:text-headline-lg-mobile mb-2">
@@ -294,16 +300,16 @@ export default function Reserve() {
                         </p>
                         <ul className="flex flex-wrap gap-x-6 gap-y-2 mb-6">
                           <li className="flex items-center gap-2 font-label-caps text-label-caps text-on-surface-variant">
-                            <span className="material-symbols-outlined text-[16px]">square_foot</span> 
+                            <span className="material-symbols-outlined text-[16px]">square_foot</span>
                             {rooms['river-suite'].size}
                           </li>
                           <li className="flex items-center gap-2 font-label-caps text-label-caps text-on-surface-variant">
-                            <span className="material-symbols-outlined text-[16px]">king_bed</span> 
+                            <span className="material-symbols-outlined text-[16px]">king_bed</span>
                             {rooms['river-suite'].bed}
                           </li>
                         </ul>
                       </div>
-                      
+
                       <div className="flex items-end justify-between mt-auto border-t border-outline-variant/20 pt-4">
                         <div>
                           <span className="block font-label-caps text-label-caps text-on-surface-variant mb-1 uppercase text-[10px]">
@@ -313,13 +319,12 @@ export default function Reserve() {
                             ${rooms['river-suite'].price}<span className="font-body-md text-body-md text-on-surface-variant">/night</span>
                           </span>
                         </div>
-                        <button 
+                        <button
                           type="button"
-                          className={`w-8 h-8 rounded-full border flex items-center justify-center transition-all duration-300 ${
-                            selectedRoom === 'river-suite' 
-                              ? 'bg-tertiary border-tertiary text-on-tertiary' 
+                          className={`w-8 h-8 rounded-full border flex items-center justify-center transition-all duration-300 ${selectedRoom === 'river-suite'
+                              ? 'bg-tertiary border-tertiary text-on-tertiary'
                               : 'border-outline hover:bg-surface-container-high'
-                          }`}
+                            }`}
                         >
                           <span className="material-symbols-outlined text-[18px]">
                             {selectedRoom === 'river-suite' ? 'check' : 'add'}
@@ -337,21 +342,20 @@ export default function Reserve() {
                   </div>
 
                   {/* Room Card 2 */}
-                  <div 
-                    onClick={() => setSelectedRoom('canopy-villa')} 
-                    className={`group relative flex flex-col md:flex-row gap-6 bg-surface-container-low/50 backdrop-blur-md p-4 rounded-xl transition-all duration-500 border cursor-pointer ${
-                      selectedRoom === 'canopy-villa' ? 'border-tertiary shadow-lg' : 'border-outline-variant/15 hover:border-outline/40'
-                    }`}
+                  <div
+                    onClick={() => setSelectedRoom('canopy-villa')}
+                    className={`group relative flex flex-col md:flex-row gap-6 bg-surface-container-low/50 backdrop-blur-md p-4 rounded-xl transition-all duration-500 border cursor-pointer ${selectedRoom === 'canopy-villa' ? 'border-tertiary shadow-lg' : 'border-outline-variant/15 hover:border-outline/40'
+                      }`}
                   >
                     <div className="w-full md:w-1/3 aspect-[4/3] md:aspect-square overflow-hidden rounded-lg relative">
                       <div className={`absolute inset-0 transition-colors duration-500 z-10 ${selectedRoom === 'canopy-villa' ? 'bg-transparent' : 'bg-black/40 group-hover:bg-transparent'}`}></div>
-                      <img 
-                        className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" 
-                        alt="Canopy Villa elevated sanctuary view" 
+                      <img
+                        className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                        alt="Canopy Villa elevated sanctuary view"
                         src={rooms['canopy-villa'].image}
                       />
                     </div>
-                    
+
                     <div className="flex-1 py-2 pr-4 flex flex-col justify-between">
                       <div>
                         <h3 className="font-headline-lg-mobile text-2xl md:text-headline-lg-mobile mb-2">
@@ -362,16 +366,16 @@ export default function Reserve() {
                         </p>
                         <ul className="flex flex-wrap gap-x-6 gap-y-2 mb-6">
                           <li className="flex items-center gap-2 font-label-caps text-label-caps text-on-surface-variant">
-                            <span className="material-symbols-outlined text-[16px]">square_foot</span> 
+                            <span className="material-symbols-outlined text-[16px]">square_foot</span>
                             {rooms['canopy-villa'].size}
                           </li>
                           <li className="flex items-center gap-2 font-label-caps text-label-caps text-on-surface-variant">
-                            <span className="material-symbols-outlined text-[16px]">king_bed</span> 
+                            <span className="material-symbols-outlined text-[16px]">king_bed</span>
                             {rooms['canopy-villa'].bed}
                           </li>
                         </ul>
                       </div>
-                      
+
                       <div className="flex items-end justify-between mt-auto border-t border-outline-variant/20 pt-4">
                         <div>
                           <span className="block font-label-caps text-label-caps text-on-surface-variant mb-1 uppercase text-[10px]">
@@ -381,13 +385,12 @@ export default function Reserve() {
                             ${rooms['canopy-villa'].price}<span className="font-body-md text-body-md text-on-surface-variant">/night</span>
                           </span>
                         </div>
-                        <button 
+                        <button
                           type="button"
-                          className={`w-8 h-8 rounded-full border flex items-center justify-center transition-all duration-300 ${
-                            selectedRoom === 'canopy-villa' 
-                              ? 'bg-tertiary border-tertiary text-on-tertiary' 
+                          className={`w-8 h-8 rounded-full border flex items-center justify-center transition-all duration-300 ${selectedRoom === 'canopy-villa'
+                              ? 'bg-tertiary border-tertiary text-on-tertiary'
                               : 'border-outline hover:bg-surface-container-high'
-                          }`}
+                            }`}
                         >
                           <span className="material-symbols-outlined text-[18px]">
                             {selectedRoom === 'canopy-villa' ? 'check' : 'add'}
@@ -414,7 +417,7 @@ export default function Reserve() {
                   <h3 className="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest mb-6 text-[10px]">
                     Reservation Summary
                   </h3>
-                  
+
                   <div className="flex justify-between items-start mb-6">
                     <div>
                       <h4 className="font-headline-md text-headline-md mb-1">
@@ -475,8 +478,8 @@ export default function Reserve() {
                       ${total.toLocaleString()}
                     </span>
                   </div>
-                  
-                  <button 
+
+                  <button
                     onClick={handleCompleteBooking}
                     disabled={isReserving}
                     className="w-full py-4 border border-outline text-on-surface font-label-caps text-label-caps uppercase tracking-[0.2em] hover:bg-secondary hover:text-on-secondary hover:border-secondary transition-colors duration-500 cursor-pointer disabled:opacity-50 select-none text-[11px]"

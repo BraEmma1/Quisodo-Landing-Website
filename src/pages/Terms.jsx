@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import ScrollReveal from '../components/ScrollReveal';
+import quisodoLogo from '../assets/Optimized images/quisodo logo.png';
 
 export default function Terms() {
   const [activeSection, setActiveSection] = useState('information');
@@ -46,9 +47,13 @@ export default function Terms() {
         <div className="flex justify-between items-center mb-16 md:mb-24">
           <Link 
             to="/" 
-            className="font-display-xl text-headline-md tracking-[0.25em] text-on-surface hover:text-primary transition-colors duration-500 uppercase select-none"
+            className="transition-opacity duration-500 hover:opacity-70 select-none"
           >
-            QUISODO
+            <img
+              src={quisodoLogo}
+              alt="Quisodo Landing"
+              className="h-9 w-auto object-contain brightness-0 invert"
+            />
           </Link>
           <Link 
             to="/" 
@@ -96,7 +101,7 @@ export default function Terms() {
         {/* Legal Text Canvas */}
         <article className="w-full md:w-3/4 max-w-3xl font-body-lg text-body-lg leading-relaxed text-on-surface-variant">
           <p className="text-xl md:text-2xl leading-relaxed text-on-surface mb-12">
-            At Quisodo Riverside Sanctuary, we recognize the paramount importance of privacy for our discerning guests. This Privacy Policy details our approach to safeguarding the personal information entrusted to us, reflecting our commitment to quiet luxury and absolute discretion.
+            At Quisodo Landing, we recognize the paramount importance of privacy for our discerning guests. This Privacy Policy details our approach to safeguarding the personal information entrusted to us, reflecting our commitment to quiet luxury and absolute discretion.
           </p>
 
           <section className="scroll-mt-32 mb-16" id="information">
@@ -116,7 +121,7 @@ export default function Terms() {
               2. How We Use Your Information
             </h2>
             <p className="mb-6">
-              The information we curate is utilized primarily to elevate your experience at Quisodo. This includes processing reservations, tailoring our services to your nuanced preferences, and ensuring seamless communication prior to, during, and after your visit.
+              The information we curate is utilized primarily to elevate your experience at Quisodo Landing. This includes processing reservations, tailoring our services to your nuanced preferences, and ensuring seamless communication prior to, during, and after your visit.
             </p>
             <p className="mb-6">
               Furthermore, we employ this data to maintain the security of our premises and digital platforms, to analyze trends in pursuit of refining our offerings, and to comply with legal obligations as required by international hospitality standards.
@@ -128,7 +133,7 @@ export default function Terms() {
               3. Sharing of Information
             </h2>
             <p className="mb-6">
-              Quisodo holds your privacy in the highest regard. We do not sell your personal information. We may share necessary data with trusted third-party service providers who assist us in operating our sanctuary, conducting our business, or servicing you, so long as those parties agree to keep this information strictly confidential.
+              Quisodo Landing holds your privacy in the highest regard. We do not sell your personal information. We may share necessary data with trusted third-party service providers who assist us in operating our sanctuary, conducting our business, or servicing you, so long as those parties agree to keep this information strictly confidential.
             </p>
             <p className="mb-6">
               We may also release information when its release is appropriate to comply with the law, enforce our sanctuary policies, or protect ours or others' rights, property or safety.
@@ -160,10 +165,10 @@ export default function Terms() {
             </p>
             <a 
               className="font-label-caps text-label-caps text-primary hover:text-tertiary transition-colors duration-300 inline-flex items-center gap-2 tracking-widest text-[11px]" 
-              href="mailto:privacy@quisodo.com"
+              href="mailto:privacy@quisodolanding.com"
             >
               <span className="material-symbols-outlined text-sm">mail</span>
-              PRIVACY@QUISODO.COM
+              PRIVACY@QUISODOLANDING.COM
             </a>
           </div>
         </article>

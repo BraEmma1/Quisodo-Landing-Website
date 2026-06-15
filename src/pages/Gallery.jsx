@@ -1,5 +1,12 @@
 import { useState, useEffect } from 'react';
 import ScrollReveal from '../components/ScrollReveal';
+import familyPicture from '../assets/Optimized images/family-picture.jpg';
+import familyOnBoat from '../assets/Optimized images/family-on-boat.jpg';
+import quisodoBoat from '../assets/Optimized images/quisodo-boat.jpg';
+import quisodoFacilityView from '../assets/Optimized images/quisodo-landing-facility-view.jpg';
+import quisodoLandingFamilyOnBoat from '../assets/Optimized images/quisodo-landing-family-on-boat.jpg';
+import ada from '../assets/Optimized images/ada.jpg';
+import facilityView from '../assets/Optimized images/facility-view.jpg';
 
 export default function Gallery() {
   const [filter, setFilter] = useState('all');
@@ -8,39 +15,40 @@ export default function Gallery() {
   const galleryItems = [
     {
       id: 1,
-      category: 'stay',
-      title: 'The Riverside Suite',
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDY4fvk9Yw8qpUiwhOsE4sDkimD26hbKh6VvU3K_Fzv_vnGjYYpoA-6G07l12l-wLlY-LYxYLyxuSkX0wwGDhnxsHg-U2GKUe98-_rdrvVAzgqUj-2us5UTxgcvwNdYxob96Wt49t1PLIeQHVb07sWjUD0OV1D_mI03AhBQitL9u-AWHTBcIzhbeELIOWYprj0itrcRe-YyuuSBDB4ZKO7q2OSl1sCVAfDD-SzLFkGcvUzq7cnMkU2JV8WjjFH6BosL0VUZW1OaLhnU',
+      category: 'moments',
+      title: 'Family Gathering',
+      image: familyPicture,
     },
     {
       id: 2,
       category: 'river',
-      title: 'Evening Mist on the Volta',
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCmpFq_9UsHo2yvStnOOUjvRHtoja8_WUDZTCDHWNzLKlTQe89Y1UjMPeUbhHCfVI01FS5FVIpFzjzhpNm0XasMG8pE3Id-oTnZiXOiAUN1oK5WakEUxtxB8SmYxqJ1VZcSKaMa63q9tp43A_1eKEPx55A37MixNxvmrBpKvIdNMwCj94ku2TrA_JZ6FM3g9Tl8Sl_pgzh-WiNCVqaijRmE1q6GCreK1kHRUz3DGXnPc5AUpY0Sr63lK3DrOC2ofr0mpI66EcbPeBgZ',
+      title: 'Family on the River',
+      image: familyOnBoat,
     },
     {
       id: 3,
-      category: 'moments',
-      title: 'Morning Ritual',
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBZY9YE5yItGbC4lpO0TjGbyAB2VcF4x1OLu0L6jt7kZJBOu4qhgZx4iO5nWwOZgF4uXE9ITTCF7ypTC58FjKYETZX3NzXmUamaCUOgKee7frrgGJ43yK-QSJ8vooQzir0fDw1mcwEnFZULt1PymCMr4GxdVxwtIk2cjWetblVK69ex6SGHskHHS6svZeTQcref0DAiBeUtauonQpDXo2ISH-Rpq6nfdNSOW3g4QZKDodEoQTnuJWePNku-e6qlyMLv7Zg-p3lNxOmO',
+      category: 'river',
+      title: 'The Quisodo Boat',
+      image: quisodoBoat,
     },
     {
       id: 4,
-      category: 'culture',
-      title: 'The Weaver\'s Craft',
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBao22GeeOM7-YGFGeReB7ZwF7AuyieAMycGZHPFVbNaENiNy3nJ_GdZDzwHsu6Y_KjFJy4hmbFkGaure3MM8hBQin8EwtuUk9b-089q-nLXqgXrHlgDwzSKWTjCzMlKAJmT9ZM82CGxcv_p2NwU8adEKrNWtpYnPrgJkjVwaMrrkn1meDC2XfjZrTGDvuUOI2D_I8AGHbTGnjImNm5RwsCnfxphavM_0b729k6yUea0y4tgJ45v1NuD1kV_3UflajcxcVqTkeMRqrY',
+      category: 'stay',
+      title: 'Facility View',
+      image: quisodoFacilityView,
     },
     {
       id: 5,
-      category: 'stay',
-      title: 'The Deck at Dusk',
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAC5GQHbWyhpLMeURi3M0oQxXc6t3V9awOJx6hNOy2O_O62ltAwiSmWrbYd8IRrA5QCzpc3MGYgX73mbTUCqCpbIfrI4c83MdSPBZSGFzik3T92S99TjOqyHYrf4fD0iy2pnXTRjPStGsr-X4b5BY3A3j8k3kikDudFtXLjsK3WzckmkN1kiLNE6xaHah-G8JPsKlzT5uB0HEbvYlNKS39rkwbrWh88TTseIfk2ouf3xOD26U56mI68wm9zpadcHN1rgCBQSlDBo80A',
+      category: 'moments',
+      title: 'Arrival by Boat',
+      image: quisodoLandingFamilyOnBoat,
     },
+
     {
-      id: 6,
-      category: 'river',
-      title: 'Silent Passage',
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAkf1730HQ9fu1Ifei5H4m0pDBVnGK-3PuA_IQAMNsThurBL75Vp_oJbtgPoyEEiS_LMRy5YOp7cmhb-sCxMl2r7P5JEr_HSuiRLCVeFncOd-Ay_2htvRDDVF0TkZmXwBXtpioSEmNmFAnm7BXCNuLAnnVKkV-cBN_6UpEOT7Ty23FlawEZ5tPXAMzo0NZ2jM_kp5RojCR94l4QHFd8EDWPuzKHLxNUwiPn3aXou6yvn7nBiO1i9U8sXUJapojf73jWz555dqtsXvm5',
+      id: 7,
+      category: 'stay',
+      title: 'Facility Overview',
+      image: facilityView,
     },
   ];
 
@@ -79,7 +87,7 @@ export default function Gallery() {
               Visuals of the Sanctuary
             </h1>
             <p className="font-body-lg text-body-lg text-on-surface-variant">
-              A curated collection of moments, capturing the quiet luxury and cinematic atmosphere of the Volta River. Immerse yourself in the textures, light, and stories of Quisodo.
+              A curated collection of moments, capturing the quiet luxury and cinematic atmosphere of the Volta River. Immerse yourself in the textures, light, and stories of Quisodo Landing.
             </p>
           </ScrollReveal>
         </div>
@@ -100,11 +108,10 @@ export default function Gallery() {
               <button
                 key={tab.id}
                 onClick={() => setFilter(tab.id)}
-                className={`font-label-caps text-label-caps tracking-[0.2em] transition-all duration-300 pb-2 cursor-pointer focus:outline-none relative ${
-                  filter === tab.id
+                className={`font-label-caps text-label-caps tracking-[0.2em] transition-all duration-300 pb-2 cursor-pointer focus:outline-none relative ${filter === tab.id
                     ? 'text-primary after:scale-x-100'
                     : 'text-on-surface-variant hover:text-primary after:scale-x-0'
-                } after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-primary after:origin-center hover:after:scale-x-100 after:transition-transform after:duration-500`}
+                  } after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-primary after:origin-center hover:after:scale-x-100 after:transition-transform after:duration-500`}
               >
                 {tab.label}
               </button>
@@ -149,7 +156,7 @@ export default function Gallery() {
           >
             <span className="material-symbols-outlined text-[32px]">close</span>
           </button>
-          
+
           {/* Image container */}
           <div className="relative w-full max-w-6xl max-h-[75vh] flex items-center justify-center px-4 animate-scaleUp">
             <img

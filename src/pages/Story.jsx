@@ -20,7 +20,7 @@ export default function Story() {
               Where the River <span className="italic text-tertiary">Meets the Soul</span>
             </h1>
             <p className="font-body-lg text-body-lg text-white/70 max-w-2xl mx-auto">
-              Quisodo is not merely a destination; it is a narrative woven into the currents of the Volta. A sanctuary designed for quiet contemplation and profound connection with the elemental landscape of Ada.
+              Quisodo Landing is not merely a destination; it is a narrative woven into the currents of the Volta. A sanctuary designed for quiet contemplation and profound connection with the elemental landscape of Ada.
             </p>
           </ScrollReveal>
         </div>
@@ -55,7 +55,7 @@ export default function Story() {
                 <div className="w-12 h-[1px] bg-primary mb-6"></div>
                 <div className="space-y-6">
                   <p className="font-body-lg text-body-lg text-on-surface">
-                    For generations, the people of Ada have lived in rhythmic harmony with the estuary. Their lives are dictated not by the clock, but by the tides, the winds, and the migration of the fish. Quisodo was born from a deep reverence for this ancient cadence.
+                    For generations, the people of Ada have lived in rhythmic harmony with the estuary. Their lives are dictated not by the clock, but by the tides, the winds, and the migration of the fish. Quisodo Landing was born from a deep reverence for this ancient cadence.
                   </p>
                   <p className="font-body-md text-body-md text-on-surface-variant">
                     We sought to create a space that doesn't impose itself on the landscape, but rather emerges from it. Every architectural line, every textured surface, and every curated experience is an homage to the resilience and grace of riverine life.

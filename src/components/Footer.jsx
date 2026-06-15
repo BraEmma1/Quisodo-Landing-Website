@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import quisodoLogo from '../assets/Optimized images/quisodo logo.png';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -22,7 +23,7 @@ export default function Footer() {
 
       <div className="max-w-container-max mx-auto px-margin-mobile md:px-12 lg:px-margin-desktop">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-y-16 lg:gap-x-12 mb-24">
-          
+
           {/* Section 1: Newsletter & Contact Cluster */}
           <div className="col-span-12 lg:col-span-4 space-y-16">
             {/* Newsletter */}
@@ -31,7 +32,7 @@ export default function Footer() {
               <p className="font-body-md text-on-surface-variant max-w-xs uppercase leading-relaxed">
                 RECEIVE OUR LATEST OFFERS AND NEWS UPDATES
               </p>
-              
+
               {subscribed ? (
                 <div className="font-label-caps text-label-caps text-tertiary py-4 transition-all duration-500 animate-pulse">
                   THANK YOU FOR SUBSCRIBING
@@ -62,7 +63,7 @@ export default function Footer() {
               <p className="font-body-md text-on-surface-variant tracking-wider uppercase">
                 32 KIFISSIAS AVENUE, ADA, GHANA
               </p>
-              
+
               {/* Premium Brand Socials */}
               <div className="flex gap-4 pt-2">
                 <a
@@ -130,7 +131,7 @@ export default function Footer() {
               {/* About */}
               <div className="space-y-8">
                 <h3 className="font-display-xl text-[20px] text-on-surface italic normal-case tracking-normal">
-                  About Quisodo Lodge
+                  About Quisodo Landing
                 </h3>
                 <ul className="space-y-4 flex flex-col">
                   <li>
@@ -246,9 +247,14 @@ export default function Footer() {
         </div>
 
         {/* Footer Bottom */}
-        <div className="border-t border-outline-variant/10 pt-12 flex flex-col items-center gap-8">
+        <div className="border-t border-outline-variant/10 pt-12 flex flex-col items-center gap-6">
+          <img
+            src={quisodoLogo}
+            alt="Quisodo Landing"
+            className="h-14 w-auto object-contain opacity-40"
+          />
           <p className="font-label-caps text-label-caps text-on-surface-variant/40 tracking-[0.3em] uppercase">
-            COPYRIGHT QUISODO LODGE © {currentYear}
+            COPYRIGHT QUISODO LANDING © {currentYear}
           </p>
           <div className="flex items-center gap-2 text-on-surface-variant/20 hover:text-tertiary transition-colors duration-500 cursor-default">
             <span className="w-1.5 h-1.5 bg-current rounded-full"></span>

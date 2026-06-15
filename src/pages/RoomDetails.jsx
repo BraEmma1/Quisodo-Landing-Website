@@ -1,6 +1,10 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import ScrollReveal from '../components/ScrollReveal';
+import room1 from '../assets/Optimized images/room1.webp';
+import room2 from '../assets/Optimized images/room2.webp';
+import room3 from '../assets/Optimized images/room3.webp';
+import room4 from '../assets/Optimized images/room4.webp';
 
 const rooms = {
   'volta-suite': {
@@ -9,7 +13,7 @@ const rooms = {
     subtitle: 'Riverfront Elegance.',
     description: 'Immerse yourself in the quiet luxury of the Volta Suite. Suspended above the flowing waters, this expansive space features raw, natural textures contrasting with precise, modern minimalism. Every detail is curated to foster deep relaxation and profound connection with the surrounding river ecosystem.',
     price: 850,
-    heroImage: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD7sTTUWC0W4ZmSHJ9L0bhHO0dz2H-u19yZ5XiDrvTjtjizf0-7d9L5eziLxLJ47_s-C88FFLYjJGjlzbjAEhzhqAuq61HxPyL71a9YLx9Mx62Gb5crrTI74lDx_yqTeKxRvd9wQgPSOKPjghAR-dEkzeRTEPkDUWQp4-phuTjAPMmai9jYkrqaCG0dan1NxFabPuWD-zGXhqWaEhXw_GIKtFjbPbmhlrCI6TXRo2njpTkQiafaA-u9UFS4DuVjzZ0de5d-fhctooWc',
+    heroImage: room1,
     amenities: [
       { icon: 'square_foot', label: 'Expansive Space', desc: '1,200 sq ft of indoor-outdoor living area with seamless transitions.' },
       { icon: 'bathtub', label: 'Freestanding Tub', desc: 'A sculptural stone basin positioned for unobstructed river views.' },
@@ -17,9 +21,8 @@ const rooms = {
       { icon: 'room_service', label: 'Bespoke Service', desc: 'Dedicated concierge and in-suite dining available 24/7.' },
     ],
     gallery: [
-      { src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuC5i3tk006Xf9k1yG7MwjGezQPPCWUC7efkJ65g9GCopXuETze29uNUuu_0WJtFD2tWoC2mc2xKitDYiblWApvn8r4jNJXu-m_Kwmym-vxp05Yaa_qBynXR7ACdCOQbbDwaW7GT0uynUmRvWkBJ1gqOaHlnklUPKC_FPeWkV3Dr1rIxprLOVHi_AH8C_UtYPIA2eCfVGvf04_oJYrMeu-iL9IYPFmVAhHxRKPcunt9rmsSzXSumWUdq5dYhaEGTVUh872jf-IFlJgNx', alt: 'Suite Bathroom' },
-      { src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAqgLW8OcF6y77zTwfijvXD99st0xvXEmiCivZFEx_iRpLRwF2RNiZD4YaKPx7BW_zSxVjzY-8_OOF1nSmKy7GlDB-MDig9-kd0SJ8KY2sksW-Nx0kfGhQP8g8kVrzYaeBsGGl306Hp9bf5sK8EoNn1_Slaywj-clAU4_W_l733HhwrFqhSsl-driUo3qGHu29ZscyMUAv-nTH6C5dZHPV2YCVaGelgUIQ5C7hA8JD_41zTPPCXY9FcV25fzc05wpJ_btsjKfSe2RVU', alt: 'Suite Living Area' },
-      { src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuB2Ke0WCqhc5HN5wELU3CHRe6D4sFitxHPHdc074eIGMXNCwFNQPfAgSLYGR0AG6FHONFoL-FGJjsawoPqSHh9e3fYsoAlpkKwTlPgl0NGzoN7WE-d3rkGUccqWPKJK1eDlwZp0vPO-Pp_LeInsiH2DCrf49rW5fHnSJp_HDQW3cl_nGgV-kz1S_r564MhUrOtXp_4tHB01bgoaYLz0-n1xenM-P2pdk55bgJ4H8loZf6lXn4mkw48bRPzIKRTgOHjJMijDINcQ7tsr', alt: 'Suite Terrace' },
+      { src: room3, alt: 'Suite Detail' },
+      { src: room1, alt: 'Suite Living Area' },
     ],
     size: '85 SQM',
     guests: '2 GUESTS',
@@ -30,7 +33,7 @@ const rooms = {
     subtitle: 'Above the Canopy.',
     description: 'Elevated among the ancient riverbank trees, this villa offers unparalleled privacy. Complete with a private plunge pool and a dedicated study corner wrapped in glass, every moment is framed by the living forest.',
     price: 1200,
-    heroImage: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAL_xikaMM9CV8nMPkDk7JtMDVlljdcOGG329U7E2AGOYv1LMkD8-diNJ4KAEsAv_aQJgVfPnQh3qUgB_M_O0eu_y0uZTQ6L4fpErtUs-QJh7HAHvMM_tnhj3gAM9D_vDSXrxym_D2sIZBmlMoWDUev0K0_O-ED9o6W4hje7-btiTg9NknaikdmHt3FQrgwdNFAG4QVdCab2jnXlSUT1eD5-OHS1d71jIsrLE5E22lrdOuEVCYqUx2F1sFpv7927GpuT9xmZnXHry7Y',
+    heroImage: room2,
     amenities: [
       { icon: 'pool', label: 'Private Plunge Pool', desc: 'Infinity-edge pool perched over the river with twilight views.' },
       { icon: 'forest', label: 'Forest Canopy Views', desc: 'Panoramic floor-to-ceiling windows framing the ancient treetops.' },
@@ -38,9 +41,8 @@ const rooms = {
       { icon: 'wifi', label: 'Seamless Connectivity', desc: 'Discreet high-speed Wi-Fi and smart home controls throughout.' },
     ],
     gallery: [
-      { src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuC5i3tk006Xf9k1yG7MwjGezQPPCWUC7efkJ65g9GCopXuETze29uNUuu_0WJtFD2tWoC2mc2xKitDYiblWApvn8r4jNJXu-m_Kwmym-vxp05Yaa_qBynXR7ACdCOQbbDwaW7GT0uynUmRvWkBJ1gqOaHlnklUPKC_FPeWkV3Dr1rIxprLOVHi_AH8C_UtYPIA2eCfVGvf04_oJYrMeu-iL9IYPFmVAhHxRKPcunt9rmsSzXSumWUdq5dYhaEGTVUh872jf-IFlJgNx', alt: 'Villa Bathroom' },
-      { src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAqgLW8OcF6y77zTwfijvXD99st0xvXEmiCivZFEx_iRpLRwF2RNiZD4YaKPx7BW_zSxVjzY-8_OOF1nSmKy7GlDB-MDig9-kd0SJ8KY2sksW-Nx0kfGhQP8g8kVrzYaeBsGGl306Hp9bf5sK8EoNn1_Slaywj-clAU4_W_l733HhwrFqhSsl-driUo3qGHu29ZscyMUAv-nTH6C5dZHPV2YCVaGelgUIQ5C7hA8JD_41zTPPCXY9FcV25fzc05wpJ_btsjKfSe2RVU', alt: 'Villa Living Area' },
-      { src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuB2Ke0WCqhc5HN5wELU3CHRe6D4sFitxHPHdc074eIGMXNCwFNQPfAgSLYGR0AG6FHONFoL-FGJjsawoPqSHh9e3fYsoAlpkKwTlPgl0NGzoN7WE-d3rkGUccqWPKJK1eDlwZp0vPO-Pp_LeInsiH2DCrf49rW5fHnSJp_HDQW3cl_nGgV-kz1S_r564MhUrOtXp_4tHB01bgoaYLz0-n1xenM-P2pdk55bgJ4H8loZf6lXn4mkw48bRPzIKRTgOHjJMijDINcQ7tsr', alt: 'Villa Terrace' },
+      { src: room4, alt: 'Villa Detail' },
+      { src: room2, alt: 'Villa Living Area' },
     ],
     size: '120 SQM',
     guests: '2 GUESTS',
@@ -54,14 +56,18 @@ export default function RoomDetails() {
   const [activeSlide, setActiveSlide] = useState(0);
   const [checkIn, setCheckIn] = useState('');
   const [checkOut, setCheckOut] = useState('');
-  const galleryRef = useRef(null);
+
+  // Auto-play interval
+  useEffect(() => {
+    const timer = setInterval(() => {
+      const nextIdx = (activeSlide + 1) % room.gallery.length;
+      scrollToSlide(nextIdx);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, [activeSlide, room.gallery.length]);
 
   const scrollToSlide = (idx) => {
     setActiveSlide(idx);
-    if (galleryRef.current) {
-      const slide = galleryRef.current.children[idx];
-      if (slide) slide.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-    }
   };
 
   return (
@@ -175,24 +181,68 @@ export default function RoomDetails() {
         {/* Image Gallery Slider */}
         <section className="w-full relative">
           <ScrollReveal>
-            <div
-              ref={galleryRef}
-              className="flex overflow-x-auto gap-4 md:gap-8 pb-8 snap-x snap-mandatory"
-              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-            >
-              {room.gallery.map((img, idx) => (
+            <div className="flex gap-4 md:gap-8 pb-8 w-full overflow-hidden">
+
+              {/* Full View Pane */}
+              <div className="shrink-0 w-[85vw] md:w-[60vw] h-[400px] md:h-[600px] relative overflow-hidden bg-surface-container rounded-sm group">
                 <div
-                  key={idx}
-                  className="snap-center shrink-0 w-[85vw] md:w-[60vw] h-[400px] md:h-[600px] relative overflow-hidden"
-                  onClick={() => setActiveSlide(idx)}
+                  className="flex w-full h-full transition-transform duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)]"
+                  style={{ transform: `translateX(-${activeSlide * 100}%)` }}
                 >
-                  <img
-                    alt={img.alt}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-700 ease-out"
-                    src={img.src}
-                  />
+                  {room.gallery.map((img, idx) => (
+                    <div key={`full-${idx}`} className="w-full h-full shrink-0 relative">
+                      <img alt={img.alt} className="w-full h-full object-cover" src={img.src} />
+                    </div>
+                  ))}
                 </div>
-              ))}
+
+                {/* Navigation Arrows */}
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    scrollToSlide((activeSlide - 1 + room.gallery.length) % room.gallery.length);
+                  }}
+                  className="absolute left-4 md:left-6 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 rounded-full bg-black/40 text-on-surface hover:text-tertiary flex items-center justify-center backdrop-blur-sm transition-all duration-300 hover:bg-black/60 active:scale-95 z-30 cursor-pointer opacity-0 group-hover:opacity-100"
+                  aria-label="Previous image"
+                >
+                  <span className="material-symbols-outlined text-[20px] md:text-[24px]">chevron_left</span>
+                </button>
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    scrollToSlide((activeSlide + 1) % room.gallery.length);
+                  }}
+                  className="absolute right-4 md:right-6 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 rounded-full bg-black/40 text-on-surface hover:text-tertiary flex items-center justify-center backdrop-blur-sm transition-all duration-300 hover:bg-black/60 active:scale-95 z-30 cursor-pointer opacity-0 group-hover:opacity-100"
+                  aria-label="Next image"
+                >
+                  <span className="material-symbols-outlined text-[20px] md:text-[24px]">chevron_right</span>
+                </button>
+              </div>
+
+              {/* Partial View Pane (Next Image) */}
+              <div
+                className="flex-1 h-[400px] md:h-[600px] relative overflow-hidden bg-surface-container rounded-sm cursor-pointer group"
+                onClick={() => scrollToSlide((activeSlide + 1) % room.gallery.length)}
+                aria-label="View next image"
+              >
+                {room.gallery.map((img, idx) => {
+                  const nextIdx = (activeSlide + 1) % room.gallery.length;
+                  return (
+                    <div
+                      key={`partial-${idx}`}
+                      className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${nextIdx === idx ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'
+                        }`}
+                    >
+                      <img
+                        alt={`Next: ${img.alt}`}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out"
+                        src={img.src}
+                      />
+                      <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-500" />
+                    </div>
+                  );
+                })}
+              </div>
             </div>
 
             {/* Thin Line Indicators */}
@@ -201,9 +251,8 @@ export default function RoomDetails() {
                 <button
                   key={idx}
                   onClick={() => scrollToSlide(idx)}
-                  className={`h-[1px] transition-all duration-500 cursor-pointer focus:outline-none ${
-                    activeSlide === idx ? 'w-16 bg-primary' : 'w-10 bg-outline-variant/50'
-                  }`}
+                  className={`h-[1px] transition-all duration-500 cursor-pointer focus:outline-none ${activeSlide === idx ? 'w-16 bg-primary' : 'w-10 bg-outline-variant/50'
+                    }`}
                 />
               ))}
             </div>

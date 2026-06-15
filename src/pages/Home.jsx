@@ -12,14 +12,14 @@ export default function Home() {
     <div className="relative w-full">
       {/* Hero Section */}
       <header
-        className="relative w-full h-[92vh] md:h-screen flex items-center justify-center overflow-hidden -mt-24"
+        className="relative w-full h-screen flex items-center justify-center overflow-hidden -mt-24"
       >
         {/* Background YouTube Video */}
         <div className="absolute inset-0 w-full h-full z-0 overflow-hidden pointer-events-none filter brightness-[0.55] select-none">
           <iframe
             className="absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-[100vh] min-w-[177.77vh] -translate-x-1/2 -translate-y-1/2"
             src="https://www.youtube.com/embed/WMO-Lt4VMdw?autoplay=1&mute=1&loop=1&playlist=WMO-Lt4VMdw&controls=0&showinfo=0&rel=0&playsinline=1&enablejsapi=1&vq=hd1080"
-            title="Quisodo Riverside Sanctuary Background Video"
+            title="Quisodo Landing Background Video"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
@@ -37,7 +37,7 @@ export default function Home() {
         <div className="relative z-20 text-center px-margin-mobile flex flex-col items-center max-w-5xl translate-y-12 md:translate-y-16">
           <ScrollReveal delay={100} className="flex flex-col items-center">
             <p className="font-label-caps text-[12px] md:text-[14px] text-tertiary mb-6 tracking-[0.45em] uppercase">
-              Welcome to Quisodo
+              Welcome to Quisodo Landing
             </p>
             <h1 className="font-display-xl text-3xl sm:text-5xl md:text-[60px] lg:text-[74px] xl:text-[82px] text-white leading-[1.08] text-shadow-elegant max-w-5xl tracking-wide">
               Where River Life<br />
@@ -78,7 +78,7 @@ export default function Home() {
                   A <span className="italic font-light text-tertiary">Sanctuary</span><br />on the Volta
                 </h2>
                 <p className="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-lg">
-                  Hidden where the currents slow and the air thickens with the scent of water lilies, Quisodo offers an unparalleled escape. It is a place where the rhythmic pulse of the river dictates the pace of the day, and luxury is found in the profound quiet.
+                  Hidden where the currents slow and the air thickens with the scent of water lilies, Quisodo Landing offers an unparalleled escape. It is a place where the rhythmic pulse of the river dictates the pace of the day, and luxury is found in the profound quiet.
                 </p>
                 <button
                   onClick={() => navigate('/story')}
@@ -234,44 +234,45 @@ export default function Home() {
         </section>
 
         {/* Boat Cruising Section */}
-        <section className="py-section-gap bg-surface-container-low overflow-hidden">
-          <div className="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-0 items-stretch bg-surface-container-lowest">
-              <div className="p-8 md:p-20 flex flex-col justify-center">
-                <ScrollReveal>
-                  <p className="font-label-caps text-label-caps text-tertiary mb-6 tracking-[0.3em]">
-                    BOAT CRUISING
-                  </p>
-                  <h2 className="font-display-xl text-4xl sm:text-5xl md:text-[56px] lg:text-[64px] text-on-surface leading-[1.05] mb-8 tracking-tight">
-                    Freedom on<br /><span className="italic font-light text-tertiary">the Water</span>
-                  </h2>
-                  <p className="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-md">
-                    Navigate the currents in unmatched style. Whether a sunset champagne cruise on a private yacht or a slow exploration of the mangrove channels in a classic mahogany skiff, the river is yours to command.
-                  </p>
-                  <div>
-                    <button
-                      onClick={() => navigate('/boats')}
-                      className="inline-block font-label-caps text-label-caps text-on-surface border border-outline px-8 py-4 hover:bg-secondary hover:text-on-secondary hover:border-secondary transition-all duration-300 cursor-pointer focus:outline-none active:scale-95"
-                    >
-                      Explore the Fleet
-                    </button>
-                  </div>
-                </ScrollReveal>
-              </div>
+        <section className="bg-surface-container-low overflow-hidden pb-section-gap">
+          
+          {/* Fullwidth Video Section (Top) */}
+          <div className="w-full h-[400px] md:h-[600px] lg:h-[700px] relative overflow-hidden group">
+            <ScrollReveal className="w-full h-full">
+              <iframe
+                className="absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-full min-w-[177.77vh] -translate-x-1/2 -translate-y-1/2 z-0 pointer-events-none filter brightness-90 group-hover:scale-102 transition-transform duration-1000"
+                src="https://www.youtube.com/embed/WMO-Lt4VMdw?autoplay=1&mute=1&loop=1&playlist=WMO-Lt4VMdw&controls=0&showinfo=0&rel=0&playsinline=1&enablejsapi=1&vq=hd1080"
+                title="Boat Cruising on the Volta River"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+              <div className="absolute inset-0 bg-overlay-bg z-10 transition-colors duration-500 group-hover:bg-overlay-bg-hover" />
+            </ScrollReveal>
+          </div>
 
-              <div className="h-[400px] md:h-auto min-h-[400px] relative overflow-hidden group">
-                <ScrollReveal className="w-full h-full">
-                  <iframe
-                    className="absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-full min-w-[177.77vh] -translate-x-1/2 -translate-y-1/2 z-0 pointer-events-none filter brightness-90 group-hover:scale-102 transition-transform duration-1000"
-                    src="https://www.youtube.com/embed/WMO-Lt4VMdw?autoplay=1&mute=1&loop=1&playlist=WMO-Lt4VMdw&controls=0&showinfo=0&rel=0&playsinline=1&enablejsapi=1&vq=hd1080"
-                    title="Boat Cruising on the Volta River"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  />
-                  <div className="absolute inset-0 bg-overlay-bg z-10 transition-colors duration-500 group-hover:bg-overlay-bg-hover" />
-                </ScrollReveal>
-              </div>
+          {/* Text Section (Bottom) */}
+          <div className="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mt-12 md:mt-20">
+            <div className="flex flex-col items-center text-center">
+              <ScrollReveal className="flex flex-col items-center">
+                <p className="font-label-caps text-label-caps text-tertiary mb-6 tracking-[0.3em]">
+                  BOAT CRUISING
+                </p>
+                <h2 className="font-display-xl text-4xl sm:text-5xl md:text-[56px] lg:text-[64px] text-on-surface leading-[1.05] mb-8 tracking-tight">
+                  Freedom on<br /><span className="italic font-light text-tertiary">the Water</span>
+                </h2>
+                <p className="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-2xl mx-auto">
+                  Navigate the currents in unmatched style. Whether a sunset champagne cruise on a private yacht or a slow exploration of the mangrove channels in a classic mahogany skiff, the river is yours to command.
+                </p>
+                <div>
+                  <button
+                    onClick={() => navigate('/boats')}
+                    className="inline-block font-label-caps text-label-caps text-on-surface border border-outline px-8 py-4 hover:bg-secondary hover:text-on-secondary hover:border-secondary transition-all duration-300 cursor-pointer focus:outline-none active:scale-95"
+                  >
+                    Explore the Fleet
+                  </button>
+                </div>
+              </ScrollReveal>
             </div>
           </div>
         </section>
